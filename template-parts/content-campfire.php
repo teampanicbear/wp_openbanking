@@ -79,9 +79,13 @@ $isAttend = in_array($current_user_id, $user_attended);
             <?php echo date_i18n("Y", $unixtimestamp); ?>
         </div>
         <?php
-        $id = get_the_ID();
-        $class = 'btn btn-primary btn-attend';
-        echo do_shortcode("[get_btn_user_attend_campfire id='$id' class='$class']");
+        $date = date("Y-m-d H:i:s");
+        $datetimestamp = strtotime($date);
+        if ($datetimestamp <= $unixtimestamp) { 
+            $id = get_the_ID();
+            $class = 'btn btn-primary btn-attend';
+            echo do_shortcode("[get_btn_user_attend_campfire id='$id' class='$class']");
+        }
         ?>
     </div>
 </div>
@@ -130,9 +134,13 @@ $isAttend = in_array($current_user_id, $user_attended);
                             </div>
                             <div>
                                 <?php
-                                $id = get_the_ID();
-                                $class = 'btn btn-primary btn-attend';
-                                echo do_shortcode("[get_btn_user_attend_campfire id='$id' class='$class']");
+                                $date = date("Y-m-d H:i:s");
+                                $datetimestamp = strtotime($date);
+                                if ($datetimestamp <= $unixtimestamp) { 
+                                    $id = get_the_ID();
+                                    $class = 'btn btn-primary btn-attend';
+                                    echo do_shortcode("[get_btn_user_attend_campfire id='$id' class='$class']");
+                                }
                                 ?>
                             </div>
                         </div>

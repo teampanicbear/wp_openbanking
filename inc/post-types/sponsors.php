@@ -78,13 +78,16 @@ class advanced_options_sponsor {
 		{"type":"radio","label":"Type sponsor","default":"community-sponsor","options":"community-sponsor : Community sponsor\r\nheadline-sponsor : Headline sponsor","id":"advanced_options_sponsor_type-sponsor"},
 		{"type":"media","label":"Logo","return":"url","modal-title":"Choose a file","modal-button":"Select this file","id":"advanced_options_sponsor_logo"},
 		{"type":"text","label":"Location","id":"advanced_options_sponsor_location"},
+		{"type":"url","label":"URL redirect","id":"advanced_options_sponsor_redirect"},
 		{"type":"url","label":"URL sponsor","id":"advanced_options_sponsor_url-sponsor"},
 		{"type":"url","label":"LinkedIn","id":"advanced_options_sponsor_linkedin"},
 		{"type":"url","label":"Facebook","id":"advanced_options_sponsor_facebook"},
 		{"type":"url","label":"Twitter","id":"advanced_options_sponsor_twitter"},
 		{"type":"url","label":"Instagram","id":"advanced_options_sponsor_instagram"},
+		{"type":"checkbox","label":"Is Brazil Campfire","id":"advanced_options_sponsor_is_brazil_campfire"},
 		{"type":"media","label":"Poster Video","button-text":"Upload","return":"url","modal-title":"Choose a file","modal-button":"Select this file","id":"advanced_options_sponsor_poster-video"},
 		{"type":"media","label":"Video","return":"url","modal-title":"Choose a file","modal-button":"Select this file","id":"advanced_options_sponsor_video"}]}';
+
 
 	public function __construct() {
 		$this->config = json_decode( $this->config, true );

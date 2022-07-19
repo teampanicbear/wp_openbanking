@@ -133,8 +133,17 @@
                             ?>
                             <?php if ($the_query->have_posts()) : ?>
                                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                    <?php 
+                                        $url = get_the_permalink(); 
+                                        $redirect = get_post_meta(get_the_ID(), 'advanced_options_sponsor_redirect', true);
+                                        $target = false;
+                                        if(!empty($redirect)) {
+                                            $url = $redirect;
+                                            $target = true;
+                                        }
+                                    ?>
                                     <div class="sponsor-avatar" data-title="<?php the_title(); ?>" data-content="<?php echo get_post_meta(get_the_ID(), 'advanced_options_sponsor_description', true) ?>">
-                                        <a href="<?php the_permalink(); ?>" title='<?php the_title(); ?>'><img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>"></a>
+                                        <a href="<?php echo $url; ?>" title='<?php the_title(); ?>' <?php echo $target ? 'target="_blank"' : ''; ?>><img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>"></a>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -161,8 +170,17 @@
                         ?>
                         <?php if ($the_query->have_posts()) : ?>
                             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                <?php 
+                                    $url = get_the_permalink(); 
+                                    $redirect = get_post_meta(get_the_ID(), 'advanced_options_sponsor_redirect', true);
+                                    $target = false;
+                                    if(!empty($redirect)) {
+                                        $url = $redirect;
+                                        $target = true;
+                                    }
+                                ?>
                                 <div class="sponsor-avatar sponsor-other" data-title="<?php the_title(); ?>" data-content="<?php echo get_post_meta(get_the_ID(), 'advanced_options_sponsor_description', true) ?>">
-                                    <a href="<?php the_permalink(); ?>" title='<?php the_title(); ?>'><img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>"></a>
+                                    <a href="<?php echo $url; ?>" title='<?php the_title(); ?>' <?php echo $target ? 'target="_blank"' : ''; ?>><img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>"></a>
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -189,9 +207,18 @@
                             $the_query = new WP_Query($args);
                             ?>
                             <?php if ($the_query->have_posts()) : ?>
-                                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>\
+                                    <?php 
+                                        $url = get_the_permalink(); 
+                                        $redirect = get_post_meta(get_the_ID(), 'advanced_options_sponsor_redirect', true);
+                                        $target = false;
+                                        if(!empty($redirect)) {
+                                            $url = $redirect;
+                                            $target = true;
+                                        }
+                                    ?>
                                     <div class="sponsor-avatar" data-title="<?php the_title(); ?>" data-content="<?php echo get_post_meta(get_the_ID(), 'advanced_options_sponsor_description', true) ?>">
-                                        <a href="<?php the_permalink(); ?>" title='<?php the_title(); ?>'><img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>"></a>
+                                        <a href="<?php echo $url; ?>" title='<?php the_title(); ?>' <?php echo $target ? 'target="_blank"' : ''; ?>><img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>"></a>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -218,8 +245,17 @@
                         ?>
                         <?php if ($the_query->have_posts()) : ?>
                             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                <?php 
+                                    $url = get_the_permalink(); 
+                                    $redirect = get_post_meta(get_the_ID(), 'advanced_options_sponsor_redirect', true);
+                                    $target = false;
+                                    if(!empty($redirect)) {
+                                        $url = $redirect;
+                                        $target = true;
+                                    }
+                                ?>
                                 <div class="sponsor-avatar" data-title="<?php the_title(); ?>" data-content="<?php echo get_post_meta(get_the_ID(), 'advanced_options_sponsor_description', true) ?>">
-                                    <a href="<?php the_permalink(); ?>" title='<?php the_title(); ?>'><img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>"></a>
+                                    <a href="<?php echo $url; ?>" title='<?php the_title(); ?>' <?php echo $target ? 'target="_blank"' : ''; ?>><img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>"></a>
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>

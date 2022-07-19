@@ -92,12 +92,12 @@ class Elementor_BrazilCampfire_Widget extends \Elementor\Widget_Base
         ?>
         <?php if ($the_query->have_posts()) : ?>
             <?php
-            $first_post = $the_query->posts[0];
-            $unixtimestamp = strtotime($first_post->start_date);
-            $unixtimeend = strtotime($first_post->end_date);
-            $url_image = get_the_post_thumbnail_url($first_post->ID);
+                $first_post = $the_query->posts[0];
+                $unixtimestamp = strtotime($first_post->start_date);
+                $unixtimeend = strtotime($first_post->end_date);
+                $url_image = get_the_post_thumbnail_url($first_post->ID);
             ?>
-        <?php endif; ?>
+        
         <div class="wrapper-campfire schero">
             <div class="banner-campfire jarallax" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('<?= $settings['img-thumbnail']['url'] ?>') ;"></div>
             <div class="wrapper-bottom-campfire wrapper">
@@ -153,15 +153,19 @@ class Elementor_BrazilCampfire_Widget extends \Elementor\Widget_Base
                             <a href="<?php echo $link; ?>" class="<?php echo $class; ?>"><?php echo $title; ?></a>
 
                             <?php
-                            if (!is_user_logged_in()) {
-                                $link = get_permalink($first_post->ID);
-                                $title = 'Register now';
-                                $id = $first_post->ID;
-                                $class = 'btn btn-border';
-                                echo do_shortcode("[get_link_campfire_detail_register url='$link' title='$title' id='$id' class='$class']");
-                            } else {
-                                $class = 'btn btn-primary btn-attend';
-                                echo do_shortcode("[get_btn_user_attend_campfire id='$id' class='$class']");
+                            $date = date("Y-m-d H:i:s");
+                            $datetimestamp = strtotime($date);
+                            if ($datetimestamp <= $unixtimestamp) { 
+                                if (!is_user_logged_in()) {
+                                    $link = get_permalink($first_post->ID);
+                                    $title = 'Register now';
+                                    $id = $first_post->ID;
+                                    $class = 'btn btn-border';
+                                    echo do_shortcode("[get_link_campfire_detail_register url='$link' title='$title' id='$id' class='$class']");
+                                } else {
+                                    $class = 'btn btn-primary btn-attend';
+                                    echo do_shortcode("[get_btn_user_attend_campfire id='$id' class='$class']");
+                                }
                             }
                             ?>
                         </div>
@@ -169,7 +173,7 @@ class Elementor_BrazilCampfire_Widget extends \Elementor\Widget_Base
                 </div>
             </div>
         </div>
-
+        <?php endif; ?>
 <?php
     }
 

@@ -1,5 +1,15 @@
 <?php
 
+function ct_post_title_filter($where, $wp_query) {
+    global $wpdb;
+
+    if ( $search_term = $wp_query->get( 'ct_search_post_title' ) ) {
+        $where .= ' AND ' . $wpdb->posts . '.post_title LIKE \'%' . $wpdb->esc_like( $search_term ) . '%\'';
+    }
+
+    return $where;
+}
+
 // http://example.com/wp-json/theme/v1/get-recent-posts?key=abc&category=abc&region=regoina&essential=es1&page=1&size=10
 function get_previous_campfires($data)
 {
@@ -53,7 +63,7 @@ function get_previous_campfires($data)
     );
 
     if ($_GET['s']) {
-        $args['s'] = $_GET['s'];
+        $args['ct_search_post_title'] = $_GET['s'];
     }
     if (isset($_GET['cate'])) {
         $cate = $_GET['cate'];
@@ -156,10 +166,38 @@ function get_previous_campfires($data)
         }
     }
 
+    if (!empty($_GET['region']) && !empty($_GET['essential'])) {
+        $args['meta_query'] = array(
+            'relation'		=> 'AND',
+            array(
+                'key'	 	=> 'essential',
+                'value'	  	=> $_GET['essential'],
+                'compare' 	=> '=',
+            ),
+            array(
+                'key'	  	=> 'region',
+                'value'	  	=> $_GET['region'],
+                'compare' 	=> '=',
+            ),
+        );
+    } else {
+        if (!empty($_GET['region'])) {
+            $args['meta_key'] = 'region';
+            $args['meta_value'] = $_GET['region'];
+        }
 
+        if (!empty($_GET['essential'])) {
+            $args['meta_key'] = 'essential';
+            $args['meta_value'] = $_GET['essential'];
+        }
+    }
+
+    add_filter( 'posts_where', 'ct_post_title_filter', 10, 2 );
     $query = new WP_Query($args);
+
     $max_num_pages = $query->max_num_pages;
     $posts = $query->get_posts();
+    remove_filter( 'posts_where', 'ct_post_title_filter', 10 );
 
     $posts = array_map(function ($item) {
         $unixtimestamp = strtotime($item->start_date);
@@ -187,7 +225,7 @@ function get_link_campfire_detail($args)
     $title = $args['title'];
     $id = $args['id'];
     $login = $args['login'];
-    $tag_html = $args['tag_html'];
+    $tag_html = !empty($args['tag_html']) ? $args['tag_html'] : '';
     $directory_uri = get_template_directory_uri();
 
     if ($tag_html == 'img') {

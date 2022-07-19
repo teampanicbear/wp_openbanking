@@ -26,14 +26,14 @@ class Elementor_UpcomingCampfire_Widget extends \Elementor\Widget_Base
             ]
         );
 
-        // $this->add_control(
-        //     'content',
-        //     [
-        //         'label' => __( 'Content', 'plugin-name' ),
-        //         'type' => \Elementor\Controls_Manager::WYSIWYG,
-        //         'default' => __( 'Content', 'plugin-name' ),
-        //     ]
-        // );
+        $this->add_control(
+            'is-brazil-campfire',
+            [
+                'label' => __( 'Is Brazil Campfire', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( '0', 'plugin-name' ),
+            ]
+        );
 
         $this->end_controls_section();
     }
@@ -42,6 +42,7 @@ class Elementor_UpcomingCampfire_Widget extends \Elementor\Widget_Base
     {
         $settings = $this->get_settings_for_display();
         //		$this->add_inline_editing_attributes( 'content', 'advanced' );
+        $isbrazilcampfire = $settings['is-brazil-campfire'];
 ?>
         <div class="wrapper-upcoming-campfire">
             <div class="wrapper">
@@ -77,6 +78,29 @@ class Elementor_UpcomingCampfire_Widget extends \Elementor\Widget_Base
                             ),
                         ),
                     );
+                    if($isbrazilcampfire == '1') {
+                        $args['meta_query'] = array(
+                            'relation' => 'AND',
+                            array(
+                                'relation' => 'OR',
+                                array(
+                                    'key'     => 'isbrazilcampfire',
+                                    'compare' => '=',
+                                    'value'   => '1',
+                                ),
+                                array(
+                                    'key'     => 'isbrazilcampfire',
+                                    'compare' => 'EXISTS',
+                                )
+                            ),
+                            array(
+                                'key'     => 'end_date',
+                                'type'    => 'DATETIME',
+                                'compare' => '>=',
+                                'value'   => $today,
+                            ),
+                        );
+                    }
                     $the_query = new WP_Query($args);
                     ?>
                     <?php if ($the_query->have_posts()) : ?>
@@ -174,11 +198,13 @@ class Elementor_UpcomingCampfire_Widget extends \Elementor\Widget_Base
                                             </div>
 
                                             <?php
-
-                                            $id = get_the_ID();
-                                            $class = 'btn btn-primary btn-attend';
-                                            echo do_shortcode("[get_btn_user_attend_campfire id='$id' class='$class']");
-
+                                            $date = date("Y-m-d H:i:s");
+                                            $datetimestamp = strtotime($date);
+                                            if ($datetimestamp <= $unixtimestamp) { 
+                                               $id = get_the_ID();
+                                                $class = 'btn btn-primary btn-attend';
+                                                echo do_shortcode("[get_btn_user_attend_campfire id='$id' class='$class']");
+                                            }
                                             ?>
                                         </div>
                                     </div>
