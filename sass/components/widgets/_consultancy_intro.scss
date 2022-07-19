@@ -1,0 +1,72 @@
+.wrapper-consultancy {
+    .wrapper-content-consultancy {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title-consultancy {
+        font-family: 'Publico Roman';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 110px;
+        line-height: 110px;
+        color: $color__text-black-5;
+        padding-top: 69px;
+        span{
+            margin-left: 30%;
+            display: block;
+            font-size: 180px;
+            line-height: 180px;
+        }
+    }
+
+    .invitations {
+        padding-top: 16px;
+        padding-bottom: 68px;
+        .title-invitations {
+            margin-bottom: 21px;
+            color: $color__secondary;
+        }
+        .content-invitations {
+            color: $color__secondary;
+        }
+    }
+    @media all and (max-width: 1024px) {
+        .title-consultancy {
+            font-size: 55px;
+            line-height: 55px;
+            padding-top: 150px;
+            padding-left: 0;
+            justify-content: center;
+            span{
+                margin-left: 15%;
+                font-size: 95px;
+                line-height: 95px;
+            }
+        }
+        .wrapper-content-consultancy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .invitations {
+            padding-bottom: 32px;
+            .title-invitations {
+                display: block;
+            }
+            .title-invitations {
+                text-align: start;
+            }
+        }
+    }
+    @media  (max-width: 640px) {
+        .title-consultancy {
+            font-size: 50px;
+            line-height: 50px;
+            span{
+                margin-left: 0;
+            }
+        }
+    }
+}

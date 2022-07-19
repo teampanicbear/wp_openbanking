@@ -1,0 +1,110 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $color__text-input;
+	border: 1px solid $color__border-input;
+	border-radius: 3px;
+	padding: 3px;
+
+	&:focus {
+		color: $color__text-input-focus;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+}
+
+textarea {
+	width: 100%;
+}
+
+.custom-select {
+	position: relative;
+	width: 100%;
+	text-align: left;
+	outline: none;
+	height: 47px;
+	line-height: 47px;
+}
+
+.custom-select .selected {
+	background-color: $color__text-black-5;
+	color: $color__text-black-80;
+	padding-left: 1em;
+	cursor: pointer;
+	user-select: none;
+    padding-right: 34px;
+
+	@media (max-width: 1024px) {
+		width: 100%;
+		min-width: max-content;
+		padding-right: 2em;
+		cursor: none;
+	}
+}
+
+.custom-select .selected.open {
+}
+
+.arrow-bottom {
+	position: absolute;
+    top: 15px;
+    right: 12px;
+}
+
+// .custom-select .selected:after {
+// 	position: absolute;
+// 	content: "";
+// 	top: 22px;
+// 	right: 1em;
+// 	width: 0;
+// 	height: 0;
+// 	border: 5px solid transparent;
+// 	border-color: $color__text-black-80 transparent transparent transparent;
+// }
+
+.custom-select .items {
+	color: $color__text-black-80;
+	position: absolute;
+	background-color: $color__background-body;
+	z-index: 1;
+	min-width: 100%;
+	width: max-content;
+	transition: 0.3s;
+}
+
+.custom-select .items div {
+	color: $color__text-black-80;
+	padding-left: 1em;
+	padding-right: 1em;
+	cursor: pointer;
+	user-select: none;
+}
+
+.custom-select .items div:hover {
+	background-color: $color__text-black-5;
+}
+
+.selectHide {
+	// display: none;
+	opacity: 0;
+	z-index: -1 !important;
+
+	@media (max-width: 1024px) {
+		z-index: -999;
+	}
+}

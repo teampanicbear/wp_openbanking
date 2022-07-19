@@ -1,0 +1,61 @@
+.wrapper-appathon-more {
+    background-color: $color__text-black-5;
+    padding-top: 83px;
+    padding-bottom: 82px;
+
+    @media (max-width: 1024px) {
+        padding-top: 222px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper-content {
+        .title {
+            color: $color__sub;
+            margin-bottom: 18px;
+        }
+
+        .title-mobile {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title {
+                display: none;
+            }
+
+            .title-mobile {
+                display: block;
+                color: $color__sub;
+                font-size: 42px;
+                line-height: 52px;
+                margin-bottom: 27px;
+                text-align: center;
+            }
+        }
+    }
+
+    .appathon-more {
+        position: absolute;
+        right: 0;
+        top: -265px;
+
+        @media (max-width: 1440px) {
+            right: 10%;
+        }
+
+        @media (max-width: 1024px) {
+            height: 320px;
+            top: -350px;
+            left: 0;
+            margin: auto;
+            right: 90px;
+        }
+    }
+}

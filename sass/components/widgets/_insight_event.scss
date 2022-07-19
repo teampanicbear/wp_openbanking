@@ -1,0 +1,123 @@
+.wrapper-insight-event {
+    padding-top: 80px;
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+        padding-top: 60px;
+    }
+
+    .heading {
+        @media all and (max-width: 1024px) {
+            font-size: 95px;
+            line-height: 95px;
+            display: flex;
+        }
+    }
+
+    .wrapper-latest-blog {
+        background-color: $color__background-body;
+
+        .content-latest-blog {
+            padding-top: 85px;
+            padding-bottom: 100px;
+            border-bottom: 1px solid $color__text-black-10;
+
+            @media (max-width: 1024px) {
+                padding-top: 18px;
+                padding-bottom: 80px;
+            }
+
+            .wrapper-info {
+                margin-top: 0;
+
+                h5 {
+                    color: $color__text-black-50;
+                    margin-bottom: 8px;
+                }
+
+                .main-title, .content {
+                    color: $color__sub;
+                }
+
+                .main-title-mobile {
+                    display: none;
+                }
+
+                @media (max-width: 1024px) {
+                    .main-title {
+                        display: none;
+                    }
+
+                    .main-title-mobile {
+                        display: block;
+                        margin-bottom: 18px;
+                        color: $color__sub;
+                    }
+
+                    h5 {
+                        margin-bottom: 24px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+
+            .wrapper-slide {
+                margin-bottom: 0;
+
+                .row-split {
+                    background-color: $color__text-black-10;
+                }
+
+                .list-slide {
+                    .item-slide {
+                        .description-slide {
+                            .info-slide {
+                                background-color: $color__background-body;
+                                width: 100%;
+
+                                .title-slide {
+                                    color: $color__sub;
+                                    border-bottom: 1px solid $color__border-input-hover;
+
+                                    &:hover {
+                                        color: $color__primary-hover;
+                                    }
+                                }
+
+                                .blog-category {
+                                    display: flex;
+
+                                    .tag {
+                                        &:hover {
+                                            color: $color__primary-hover;
+                                        }
+                                    }
+                                }
+
+                                .author-slide {
+                                    color: $color__text-black-50;
+                                    margin-right: 30px;
+                                    margin-left: 10px;
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+
+                            .date-time-slide {
+                                color: $color__text-black-70;
+
+                                h4 {
+                                    color: $color__text-black-90;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

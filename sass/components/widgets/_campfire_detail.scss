@@ -1,0 +1,260 @@
+.banner-show-info-campfire.sticky {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index: 11;
+    width: 100%;
+    background-color: #fff;
+    height: 60px;
+    padding: 0 2%;
+    opacity: 0;
+    &.show{
+        opacity: 1;
+        transition: .3s;
+		-webkit-transition: .3s;
+		-moz-transition: .3s;
+		-ms-transition: .3s;
+		-o-transition: .3s;
+    }
+    @media (max-width: 768px) {
+        height: 80px;
+    }
+    .banner-show-info__right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    div.item {
+        color: rgba(28, 27, 24,0.7);
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        img {
+            margin-right: 12px;
+            width: 12px;
+            height: 12px;
+        }
+
+        a {
+            color: $color__text-05;
+            text-decoration: none;
+
+            &:hover {
+                color: $color__primary;
+            }
+        }
+    }
+
+    .info-left {
+        padding-right: 35px;
+        .title{
+            color: #1C1B18;
+            font-size: 20px;
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 768px) {
+            padding-right: 20px;
+        }
+    }
+
+    .info-right {
+        padding-right: 35px;
+        
+        @media (max-width: 768px) {
+            padding-left: 20px;
+        }
+    }
+}
+.wrapper-campfire-detail{
+    .banner-show-info-campfire {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        &.not-attend{
+            justify-content: center;
+            @media (max-width: 768px) {
+                .banner-show-info__left{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+        .banner-show-info__left{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: 768px) {
+                margin-bottom: 24px;
+            }
+        }
+        div.item {
+            color: $color__text-05;
+    
+    
+            img {
+                margin-right: 12px;
+            }
+    
+            a {
+                color: $color__text-05;
+                text-decoration: none;
+    
+                &:hover {
+                    color: $color__primary;
+                }
+            }
+        }
+    
+        .info-left {
+            padding-right: 35px;
+    
+            @media (max-width: 768px) {
+                padding-right: 20px;
+            }
+        }
+    
+        .info-right {
+            padding-left: 35px;
+            
+            @media (max-width: 768px) {
+                padding-left: 20px;
+            }
+        }
+    }
+    .wrapper-blog-detail-content{
+        .wrapper-blog-detail{
+            padding: 0;
+            .wrapper-banner-logo{
+                text-align: center;
+                background-color: #F4F4F3;
+            }
+            .live{
+                display: flex;
+                flex-wrap: wrap;
+                .video{
+                    width: 70%;
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+                .chat{
+                    width: 30%;
+                    height: 425px;
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+            }
+            .blog-detail-content{
+                padding: 3% 5%;
+                .wrapper-timeline{
+                    background-color: #FFF8E7;
+                    padding: 20px;
+                    margin-top: 40px;
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            list-style: none;
+                        }
+                        .line{
+                            font-size: 18px;
+                            font-weight: 600;
+                            display: flex;
+                        }
+                        .des{
+                            margin-left: 3%;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    .wrapper-own-campfire {
+        &.other{  
+            background-color: #fff;
+            padding-top: 60px;
+            .title-item {
+                padding-top: 10px;
+            }
+        }
+        .wrapper-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 36px;
+        }
+        .list-item {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .title {
+            color: $color__sub;
+            margin-bottom: 40px;
+        }
+    }
+    .wrapper-other-speaker.campfire-detail{
+        margin-top: -300px;
+        padding-top: 60px;
+        padding-bottom: 0;
+        background-color: #1C1B18;
+        @media (max-width: 768px) {
+            margin-top: -50px;
+        }
+
+     
+        .title {
+            color: white;
+            margin-bottom: 14px;
+        }
+        .header-item {
+            text-decoration: none;
+        }
+    }
+    .wrapper-campfire-detail-sponsor{   
+        
+        background-color: #f4f4f3;
+        &.bottom{
+            background-color: #fff;
+        }
+        
+
+        .wrapper-item{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -16px;
+            padding-top: 60px;
+            &.bottom{
+                padding-bottom: 30px;
+            }
+            padding-bottom: 60px;
+            @media (max-width: 768px) {
+                padding: 40px 16px;
+                justify-content: space-between;
+                &.bottom{
+                    padding-bottom: 10px;
+                }
+            }
+            .wrapper-sponsor-logo{
+                width: calc(33% - 32px);
+                margin: 0 16px;
+                @media (max-width: 768px) {
+                    text-align: center;
+                    width: calc(50% - 7px);
+                    margin: 0;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.wrapper-pr-content {
+    padding-bottom: 150px;
+    padding-top: 80px;
+
+    @media (max-width: 1024px) {
+        padding-top: 70px;
+        padding-bottom: 96px;
+        background-color: $color__text-black-5;
+    }
+
+    .wrapper-content {
+        display: flex;
+
+        .left-container {
+            width: 23%;
+            height: fit-content;
+            position: sticky;
+            top: 50px;
+            
+            button {
+                width: 100%;
+            }
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+
+        .right-container {
+            padding-left: 132px;
+            width: calc(100% - 23%);
+            scroll-behavior: smooth !important;
+
+            .title-item {
+                width: 40%;
+                color: $color__sub;
+                font-size: 30px;
+            }
+            .list-service {
+                width: 60%;
+                padding-top: 0;
+                padding-left: 0;
+                @media (max-width: 1024px) {
+                    width: 100%;
+                }
+                li {
+                    color: $color__sub;
+                    font-size: 18px;
+                    display: flex;
+                    align-items: baseline;
+                }
+            }
+
+            .content-item-menu {
+                display: flex;
+                padding-bottom: 80px;
+                border-bottom: 1px solid $color__split-1;
+                padding-top: 80px;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                @media (max-width: 1024px) {
+                    flex-direction: column;
+                    padding-bottom: 0;
+                    padding-top: 40px;
+                }
+            }
+
+            @media (max-width: 1024px) {
+                padding-left: 0;
+                width: 100%;
+
+                .title-item {
+                    margin-bottom: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.anchor-menu {
+    background-color: $color__text-black-5;
+    padding: 17px 20px 34px 20px;
+    margin-bottom: 20px;
+
+    .title-menu {
+        padding-bottom: 13px;
+        border-bottom: 1px solid $color__text-black-10;
+        color: $color__text-black;
+    }
+
+    .list-item-menu {
+        margin-top: 28px;
+
+        .actived-item-menu {
+            color: $color__sub !important;
+        }
+
+        .item-menu {
+            @include text-16-normal;
+            color: $color__text-gold;
+            cursor: pointer;
+            margin-bottom: 18px;
+            transition: 0.3s;
+
+            &:hover {
+                color: $color__sub;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.wrapper-blog-detail-content {
+    background-color: $color__background-button;
+    .alignleft {
+        float: unset;
+    }
+    .alignright{
+        float: unset;
+    }
+    .wrapper-blog-detail {
+        position: relative;
+        padding: 5% 7%;
+        top: -369px;
+        background-color: #fff;
+        @media (max-width: 1024px) {
+            padding: 3% 5%;
+            top: -200px;
+        }
+        
+        @media (max-width: 768px) {
+            top: -102px;
+        }
+        
+        .wrapper-blog-detail-content {
+            background-color: $color__background-body;
+
+            .blog-detail-content {
+                display: grid;
+                padding: 60px 100px 91px 100px;
+
+                @media (max-width: 1024px) {
+                    padding: 60px 50px 91px 50px;     
+                }
+    
+                @media (max-width: 768px) {
+                    padding: 32px 14px 32px 14px;
+                }
+            } 
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+}

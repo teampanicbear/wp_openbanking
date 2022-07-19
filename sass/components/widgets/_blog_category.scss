@@ -1,0 +1,89 @@
+.wrapper-blog-category {
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    @media (max-width: 1024px) {
+        margin-top: 70px;
+        margin-bottom: 44px;
+    }
+
+    @media (max-width: 768px) {
+        overflow: hidden;
+    }
+
+    .item-switcher {
+        min-height: 190px !important;
+        
+        @media (max-width: 768px) {
+            width: 168px !important;
+        }
+        .icon img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .slick-dots {
+        display: none;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0px !important;
+        margin: 0;
+
+		li {
+			margin: 0 0.25rem;
+		}
+
+		button {
+			display: none;
+			width: 6px;
+			height: 6px;
+			padding: 0;
+			border: none;
+			border-radius: 100%;
+			background-color: $color__text-black-20;
+			
+			text-indent: -9999px;
+		}
+	
+		li.slick-active button {
+			background-color: $color__primary;
+		}
+
+        @media (max-width: 768px) {
+            margin-top: 20px;
+            display: flex;
+
+            button {
+                display: block;
+            }
+        }
+	
+    }
+
+    .wrapper-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        justify-content: space-between;
+        .title {
+            color: $color__sub;
+            padding-right: 30px;
+        }
+
+        .split {
+            height: 1px;
+            width: 100%;
+            background-color: $color__split-1;
+        }
+    }
+
+    .card-container {
+        @media (max-width: 768px) {
+
+            .slick-list {
+                overflow: visible;
+            }
+        }
+    }
+}

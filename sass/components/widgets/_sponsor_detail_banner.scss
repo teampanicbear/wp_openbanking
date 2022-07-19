@@ -1,0 +1,179 @@
+.wrapper-sponsor-banner {
+    background-color: black(1);
+
+    .wrapper-content {
+        padding-top: 251px;
+        padding-bottom: 110px;
+
+        @media (max-width: 1024px) {
+            display: block;
+            margin-top: 0px;
+            padding-top: 140px;
+            padding-bottom: 64px;
+        }
+
+        .wrapper-video-mission {
+            margin-top: 0;
+
+            .video-mission {
+                aspect-ratio: 600/389.02;
+            }
+            @supports not (aspect-ratio: 600/389.02) {
+                .video-mission::before {
+                    float: left;
+                    padding-top: 100%;
+                    content: "";
+                }
+
+                .video-mission::after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
+            }
+        }
+
+        .wrapper-content-title {
+            padding-left: 100px;
+            width: 50%;
+
+            @media (max-width: 1024px) {
+                padding-left: 0;
+                padding-top: 24px;
+                width: 100%;
+            }
+
+            .info-title {
+                // display: flex;
+                // justify-content: space-between;
+
+                img {
+                    height: 40px;
+                    margin-bottom: 4px;
+                    margin-top: 24px;
+                }
+            }
+
+            span {
+                color: $color__text-05;
+
+                @media (max-width: 1024px) {
+                    padding-bottom: 6px;
+                }
+
+                span {
+                    padding: 0 12px;
+                    color: $color__text-02;
+                }
+
+                a {
+                    color: $color__text-05;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $color__primary;
+                    }
+                }
+            }
+
+            h4 {
+                color: $color__primary;
+                padding-bottom: 24px;
+                padding-top: 4px;
+            }
+
+            P {
+                margin: 0;
+                padding: 24px 0;
+                color: $color__text-05;
+            }
+
+            .banner-show-info {
+                display: flex;
+                justify-content: left;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+                div {
+                    color: $color__text-05;
+                    padding: 19px 0px;
+                    justify-content: center;
+                    display: flex;
+
+                    img {
+                        margin-right: 12px;
+                    }
+
+                    a {
+                        color: $color__text-05;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $color__primary;
+                        }
+                    }
+                }
+
+                .info-left {
+                    padding-right: 26.5px;
+
+                    @media (max-width: 768px) {
+                        padding-right: 20px;
+                    }
+                }
+
+                .info-right {
+                    padding-left: 26.5px;
+
+                    @media (max-width: 768px) {
+                        padding-left: 20px;
+                    }
+                }
+            }
+
+            .banner-action {
+                display: flex;
+                align-items: center;
+
+                @media (max-width: 768px) {
+                    position: relative;
+                }
+
+                .link-action {
+                    display: flex;
+
+                    .wrapper-img {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+
+                .link-icon {
+                    padding-left: 31.5px;
+
+                    @media (max-width: 768px) {
+                        float: right;
+                        position: absolute;
+                        right: 0;
+                        justify-content: flex-end;
+                        display: flex;
+                    }
+
+                    img {
+                        padding-right: 18px;
+
+                        @media (max-width: 768px) {
+                            padding-right: 0;
+                            padding-left: 30px;
+                        }
+
+                        @media (max-width: 320px) {
+                            padding-left: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

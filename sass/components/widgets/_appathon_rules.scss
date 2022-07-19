@@ -1,0 +1,129 @@
+.wrapper-appathon-rule {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @media (max-width: 1024px) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .flex {
+        justify-content: space-between;
+    }
+
+    .rule-banner {
+        width: 40%;
+        aspect-ratio: 1;
+        object-fit: cover;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+    @supports not (aspect-ratio: 1) {
+        .rule-banner::before {
+            float: left;
+            padding-top: 100%;
+            content: "";
+        }
+
+        .rule-banner::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+
+    .rule-banner-mobile {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        display: none;
+        margin-bottom: 20px;
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
+    }
+    @supports not (aspect-ratio: 1) {
+        .rule-banner-mobile::before {
+            float: left;
+            padding-top: 100%;
+            content: "";
+        }
+
+        .rule-banner-mobile::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+
+    .wrapper-content {
+        width: 50%;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            
+        }
+
+        @media (max-width: 768px) {
+            button {
+                width: 100%;
+            }
+        }
+
+       
+
+        .title {
+            color: $color__sub;
+            margin-bottom: 9px;
+
+            @media (max-width: 1024px) {
+                font-size: 42px;
+                line-height: 52px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .sub-title {
+            color: $color__sub;
+            margin-bottom: 32px;
+            @include text-16-normal;
+
+            @media (max-width: 1024px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .list-service {
+        padding: 0;
+
+        @media (max-width: 1024px) {
+            margin-bottom: 0;
+        }
+
+        li {
+            img {
+                margin-right: 12px;
+
+                @media (max-width: 1024px) {
+                    margin-right: 7px;
+                }
+            }
+        }
+
+        .rule-item {
+            color: $color__sub;
+            display: flex;
+            align-items: baseline;
+            @include text-16-normal;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}

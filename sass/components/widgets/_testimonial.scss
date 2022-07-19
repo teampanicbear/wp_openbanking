@@ -1,0 +1,255 @@
+.heading {
+    font-style: normal;
+    font-family: 'Publico Roman';
+    font-weight: normal;
+    font-size: 180px;
+    line-height: 180px;
+    color: $color__text-black-5;
+    white-space: nowrap;
+
+    @media all and (max-width: 1024px) {
+        font-size: 95px;
+        line-height: 95px;
+        display: none;
+    }
+}
+
+.wrapper-testimonial {
+    padding-top: 160px;
+    overflow: hidden;
+    padding-bottom: 97px;
+
+    .wrapper-info {
+        display: flex;
+        justify-content: space-between;
+
+       .intro {
+            width: 306px;
+            padding-top: 22px;
+
+            .title-testimonial {
+                color: $color__sub;
+                margin-bottom: 20px;
+            }
+
+            .title-testimonial-mobile {
+                color: $color__sub;
+                display: none;
+                margin-bottom: 20px;
+
+                @media (max-width: 376px) {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+            .sub-title {
+                color: $color__sub;
+
+                @media (max-width: 376px) {
+                    text-align: center;
+                }
+            }
+       }
+
+       .content {
+           padding-right: 135px;
+
+            .banner-content-mobile {
+               display: none;
+            }
+
+            #banner-content h5{
+                opacity: 1;
+                transition: opacity 0.5s;
+
+                @media (max-width: 1024px) {
+                    font-size: 20px;
+                    line-height: 30px;  
+                }                
+            }
+
+            .hide {
+                opacity: 0 !important;
+            }
+
+            .banner-content {
+                background-color: $color__primary;
+                width: 530px;
+                padding: 77px 78px 177px 75px;
+                color: $color__sub;
+                margin-top: -55px;
+                height: 460px;
+
+                &::first-letter {
+                    font-size: 90px;
+                    line-height: 68px;
+                    margin-right: 10px;
+                    float: left;
+                }
+           }
+       }
+    }
+
+    .wrapper-slide {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: -200px;
+        margin-right: -135px;
+        .slide-testimonial-container {
+            width: 260px;
+            height: 260px;
+
+            @media all and (max-width: 1024px) {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .slide-testimonial {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)), $color__background-body;
+
+            .logo-slide {
+                margin: 15px 135px 0px 15px;
+                width: 110px;
+                height: 110px;
+                background-size: 110px 110px;
+                background-blend-mode: multiply, normal;
+            }
+
+            .content-slide {
+                padding: 0 25px;
+
+                .name-testimonial {
+                    padding-top: 23px;
+                    color: $color__text-black;
+                }
+    
+                .position-testimonial {
+                    color: $color__text-black-60;
+                }
+    
+                .badge-testimonial {
+                    padding-top: 18px;
+                    padding-bottom: 22px;
+                }
+            }
+
+            
+        }
+
+        .wrapper-action-mobile {
+            display: none;
+        }
+
+        .wrapper-action {
+            display: flex;
+            margin-bottom: 16px;
+
+            .btn-slide {
+                margin-right: 1px;
+
+                &:last-child {
+                    margin-left: 1px;
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 1024px) {
+        padding-top: 86px;
+        padding-bottom: 73px;
+
+        .wrapper-info {
+            flex-direction: column;
+
+            .intro {
+                padding-top: 5px;
+                width: auto;
+
+                .title-testimonial {
+                    display: none;
+                }
+
+                .title-testimonial-mobile {
+                    font-size: 42px;
+                    line-height: 52px;
+                    display: flex;
+                }
+            }
+
+            .content {
+                padding-right: 0;
+
+                .banner-content {
+                    background-color: $color__primary;
+                    color: $color__sub;
+                    margin-top: 40px;
+                    width: 100%;
+                    padding: 34px 28px 70px 28px;
+                    font-size: 20px;
+                    line-height: 30px;
+                    display: block;
+                    height: auto;
+
+                    &::first-letter {
+                        font-size: 70px;
+                        line-height: 60px;
+                        margin-right: 10px;
+                        float: left;
+                    }
+                }
+
+                .banner-content {
+                    // display: none;
+                }
+
+                .wrapper-slide {
+                    margin: 0;
+                    
+                    .wrapper-action {
+                        margin-top: -60px;
+                        margin-bottom: 0;
+
+                    }
+
+                    .slide-testimonial {
+                        &.slick-active{
+                            .slide-testimonial-active{
+                                display: flex;;
+                            }
+                        }
+                        .slide-testimonial-active{
+                            display: none;;
+                        }
+                        width: 100%;
+                        display: flex;
+                        height: auto;
+                        align-items: flex-end;
+                        background: $color__background-body;
+
+                        .logo-slide {
+                            width: 80px;
+                            height: 80px;
+                            background-size: 80px 80px;
+                            display: flex;
+                            justify-content: flex-end;
+                            flex-direction: column;
+                            padding: 0;
+                            margin: 15px 15px 0 0;
+                        }
+
+                        .content-slide {
+                            padding: 0 10px;
+
+                            .badge-testimonial {
+                                padding-top: 6px;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

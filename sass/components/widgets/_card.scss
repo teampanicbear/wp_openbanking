@@ -1,0 +1,134 @@
+.border-card {
+    $mobile_breakpoint: 768px;// todo
+    padding: 0 20px;
+    border: 1px solid black(0.1);
+
+    @media (max-width: $mobile_breakpoint) {
+        padding: 0;
+        border: none;
+        border-top: 1px solid black(0.1);
+    }
+
+    h6 {
+        padding: 28px 0;
+        margin-bottom: 28px;
+        border-bottom: 1px solid black(0.1);
+
+        @media (max-width: $mobile_breakpoint) {
+            padding: 20px 0;
+            margin-bottom: 0;
+            border: none;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        margin-left: 16px;
+
+        li {
+            &::marker {
+                color: black(0.2);
+            }
+
+            @include text-16-normal;
+            color: black(0.9);
+
+            &:last-child {
+                padding-bottom: 46px;
+                
+                @media (max-width: $mobile_breakpoint) {
+                    
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.avatar-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:hover {
+        .image-container {
+            opacity: 0;
+        }
+    }
+
+    .image-container-hover {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        transition: 0.6s ease;
+        padding-bottom: 138%;
+        background-blend-mode: soft-light;
+        background-size: cover !important;
+        background-position: top center !important;
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            border: 10px solid white(0.5);
+            height: 100%;
+        }
+    }
+
+    .image-container {
+        position: relative;
+        padding-bottom: 138%;
+        background-size: cover !important;
+        background-position: top center !important;
+        cursor: pointer;
+        background-blend-mode: soft-light, normal;
+        transition: 0.6s ease;
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            border: 10px solid white(0.5);
+            height: 100%;
+        }
+    }
+
+    p {
+        @include text-16-bold;
+        text-align: center;
+        padding: 12px 0;
+        margin: 0;
+    }
+}
+
+.item-switcher {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: black(0.05);
+    padding: 30px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+
+    &:hover, &.active {
+        background-color: $color__primary;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: white;
+    }
+    .title {
+        @include text-16-bold;
+        padding-top: 10px;
+        color: $color__sub;
+    }
+}

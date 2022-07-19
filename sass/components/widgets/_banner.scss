@@ -1,0 +1,190 @@
+// CSS BANNER
+
+.video-thumbnail {
+    position: absolute;
+    width: 829px !important;
+    height: 100%;
+    top: -200px;
+    right: -280px;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+        position: static;
+        margin: auto !important;
+        width: 218px !important;
+        padding-top: 149px;
+    }
+}
+
+.img-thumbnail {
+    position: absolute;
+    width: 829px !important;
+    height: 100%;
+    top: -120px;
+    right: -280px;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+        position: static;
+        margin: auto !important;
+        width: 218px !important;
+        padding-top: 149px;
+    }
+}
+
+.home-banner {
+    .wrapper-content-banner {
+        @media (max-width: 768px) {
+            padding-top: 31px !important;
+        }
+    }
+}
+
+.banner-image {// to khong dung important
+    .wrapper-content-banner {
+        padding-top: 198px !important;
+        padding-bottom: 195px !important;
+
+        @media (max-width: 768px) {
+            padding-top: 130px !important;
+            padding-bottom: 206px !important;
+        }
+        .logo-banner {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .overlay {
+        opacity: 0.3 !important;
+    }
+
+    .main-text-banner {
+        margin-bottom: 32px !important;
+    }
+}
+.wrapper-banner.brazil-banner .sub-text-banner {
+    color: #febf10 !important;
+    margin-bottom: 20px;
+}
+.wrapper-banner {
+	width: 100%;
+    background-color: $color__background-black;
+	background-size: cover;
+	position: relative;
+    overflow: hidden;
+
+    @media (max-width:768px) {
+        margin: auto;
+        justify-content: center;
+        display: grid;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(0, 7, 45, 0.6) 19.18%, rgba(0, 0, 0, 0.456) 100%);
+    }
+
+    .wrapper-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .wrapper-content-banner {
+        padding-top: 220px;
+        padding-bottom: 276px;
+        width: 60%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .demo-text-banner {
+        color: $color__text-white;
+        font-style: normal;
+        font-weight: normal;
+        margin-bottom: 3px;
+    }
+
+    .main-text-banner {
+        font-style: normal;
+        font-weight: normal;
+        color: $color__text-white;
+        margin-bottom: 11px;
+    }
+
+    .sub-text-banner {
+        font-style: normal;
+        font-weight: 300;
+        color: $color__text-white;
+        margin-bottom: 4px;
+    }
+
+    .wrapper-navi-banner {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .item-navi-banner {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: $color__primary;
+    }
+
+    .split {
+        width: 0px;
+        height: 16px;
+        border-left: 1px solid $color__text-04;
+        margin: auto 24px;
+    }
+
+    @media all and (max-width: 1024px) {
+        min-height: 697px;
+
+        .wrapper-content-banner {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 100%;
+            padding-top: 137px;
+            padding-bottom: 167px;
+        }
+
+        .wrapper-navi-banner {
+            justify-content: center;
+        }
+
+        .wrapper-btn {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-text-banner {
+            margin-bottom: 0px;
+        }
+
+        .sub-text-banner {
+            margin-bottom: 12px;
+        }
+
+        .split {
+            margin: auto 12px;
+        }
+
+        .demo-text-banner {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 14px;
+        }
+    }
+}

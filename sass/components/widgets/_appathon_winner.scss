@@ -1,0 +1,203 @@
+.wrapper-appathon-winner {
+    padding-top: 160px;
+    padding-bottom: 160px;
+
+    @media (max-width: 1024px) {
+        padding-top: 95px;
+        padding-bottom: 80px;
+    }
+
+    .slide-controls {
+        justify-content: flex-end;
+    }
+
+    .slick-dots {
+        display: none;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0px !important;
+        margin: 0;
+        position: absolute;
+        bottom: 105px;
+
+		li {
+			margin: 0 0.25rem;
+		}
+
+		button {
+			display: none;
+			width: 6px;
+			height: 6px;
+			padding: 0;
+			border: none;
+			border-radius: 100%;
+			background-color: $color__text-black-20;
+			
+			text-indent: -9999px;
+		}
+	
+		li.slick-active button {
+			background-color: $color__primary;
+		}
+
+        @media (max-width: 1024px) {
+            margin-top: 20px;
+            display: flex;
+
+            button {
+                display: block;
+            }
+        }
+	
+    }
+
+    .wrapper {
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+
+    .wrapper-content {
+        width: 35%;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+
+        .title-mobile {
+            color: $color__sub;
+            margin-bottom: 20px;
+            display: none;
+
+            @media (max-width: 1024px) {
+                display: block;
+                font-size: 42px;
+                line-height: 52px;
+            }
+        }
+
+        .title {
+            color: $color__sub;
+            margin-bottom: 20px;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+
+        .content {
+            color: $color__sub;
+            width: 80%;
+            @include text-20-light;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    .slide-video {
+        width: 65%;
+
+        .slick-slider {
+            position: initial;
+        }
+
+        .list-video {
+            width: 100%;
+            aspect-ratio: 768/576;
+        }
+        @supports not (aspect-ratio: 768/576) {
+            .list-video::before {
+                float: left;
+                padding-top: 100%;
+                content: "";
+            }
+    
+            .list-video::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
+
+        .wrapper-title {
+            margin-top: 48px;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (max-width: 1024px) {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: initial;
+            }
+        }
+
+        .title-video {
+            color: $color__sub;
+            @include text-20-bold;
+
+            @media (max-width: 1024px) {
+                margin-bottom: 32px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            width: 100%;
+
+            .list-video {
+                aspect-ratio: 336/252;
+            }
+            @supports not (aspect-ratio: 336/252) {
+                .list-video::before {
+                    float: left;
+                    padding-top: 100%;
+                    content: "";
+                }
+        
+                .list-video::after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
+            }
+        }
+    }
+
+    .video-winner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        aspect-ratio: 768/576;
+
+        .icon-play {
+            width: 110px;
+            height: 110px !important;
+            padding: 34px 32px 34px 36px;
+        }
+
+        @media (max-width: 768px) {
+            .icon-play {
+                width: 60px;
+                height: 60px !important;
+                padding: 20px 18px 20px 22px;
+            }
+        }
+    }
+    @supports not (aspect-ratio: 768/576) {
+        .video-winner::before {
+            float: left;
+            padding-top: 100%;
+            content: "";
+        }
+
+        .video-winner::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.wrapper-connect {
+    padding: 100px 0;
+    margin-top: 69px;
+    background-color: #1d1b17;
+    .wrapper-content-connect {
+    }
+    .wrapper-btn {
+        margin-top: 50px;
+        text-align: center;
+        position: relative;
+        a {
+            margin: 0 auto;
+            padding-bottom: 30px;
+            font-size: 30px;
+            
+        }
+        &::after{
+            content: "";
+            background: rgba(255, 255, 255, 0.5);
+            height: 1px;
+            width: 35%;
+            @media all and (max-width: 1024px) {
+                width: 70%;
+            }
+            position: absolute;
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+            bottom: -40px;
+        }    
+    }
+
+    .list-connect {
+        display: flex;
+        justify-content: space-between;
+
+        .item-connect {
+            width: 33.333%;
+            margin-right: 64px;
+            position: relative;
+            border-style: solid;
+            border-color: #f2af0c;
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+            text-align: center;
+            border-radius: 15px;
+            padding: 30px 0;
+            &:last-child {
+                margin-right: 0px;
+            }
+            .content {
+                padding: 20px 0;
+            }
+            .wrapper-icon-connect {
+                min-height: 130px;
+            }
+
+            .name-connect {
+                color: #f2af0c;
+                margin-bottom: 16px;
+                font-size: 52px;
+                font-weight: 600;
+            }
+
+            .content-connect {
+                color: #f2af0c;
+                font-weight: 600;
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .star-icon {
+        position: absolute;
+        top: 175px;
+        left: -178px;
+    }
+
+    @media all and (max-width: 1024px) {
+        .list-connect {
+            flex-direction: column;
+
+            .item-connect {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 70px;
+                margin-right: 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .wrapper-icon-connect {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

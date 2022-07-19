@@ -1,0 +1,129 @@
+.wrapper-sponsor-other {
+    background-color: $color__background-body;
+    padding-top: 130px;
+    padding-bottom: 150px;
+
+    @media (max-width: 1024px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .sponsor-card-other {
+        width: 100%;
+
+        .sponsor-content {
+            justify-content: flex-start;
+
+            @media (max-width: 768px) {
+                justify-content: center;
+            }
+
+            .sponsor-avatar {
+                max-width: 21.5%;
+                aspect-ratio: 268/201;
+            
+                &:hover {
+                    background-color: black(0.05);
+                }    
+
+                @media (max-width: 1439px) {
+                    max-width: 20%;
+                }
+
+                @media (max-width: 1024px) {
+                    max-width: 27%;
+                }
+
+                @media (max-width: 768px) {
+                    max-width: 27%;    
+                }
+            }
+            @supports not (aspect-ratio: 268/201) {
+                .sponsor-avatar::before {
+                    float: left;
+                    padding-top: 100%;
+                    content: "";
+                }
+        
+                .sponsor-avatar::after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
+            }
+        }
+    }
+
+    .sponsor-card-community {
+        .sponsor-content {
+            justify-content: flex-start;
+
+            @media (max-width: 768px) {
+                justify-content: center;
+            }
+        }
+    }
+
+    .partner-content {
+
+        h2 {
+            padding-bottom: 40px;
+            font-size: 52px;
+            line-height: 64px;
+
+            @media (max-width: 768px) {
+                font-size: 42px;
+                line-height: 52px;
+            }
+        }
+
+        .headline-contaner {
+            justify-content: left;
+        }
+
+        .sponsor-avatar {
+            background-color: $color__text-black-5;
+            margin: 20px;
+            width: calc(25% - 40px);
+            img {
+                max-width: 100%;
+            }
+
+            @media (max-width: 765px) {
+                margin: 5px;
+                background-color: $color__background-body;
+                img {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 320px) {
+                margin: 0;
+            }
+        }
+
+        .sponsor-other {
+            
+            &:hover {
+                background-color: black(0.05);
+            }
+
+            @media (max-width: 1439px) {
+                max-width: 20%;
+            }
+
+            @media (max-width: 1024px) {
+                max-width: 27%;
+            }
+
+            @media  (max-width: 768px) {
+                max-width: 45%;
+                background-color: $color__background-body;
+            }
+            @media (max-width: 320px) {
+                min-width: 50%;
+                max-width: 0;
+            }
+        }
+    }
+}

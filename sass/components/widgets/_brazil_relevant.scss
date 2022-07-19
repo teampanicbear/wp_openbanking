@@ -1,0 +1,194 @@
+.wrapper-relevant{
+    .title-relevant {
+        font-family: 'Publico Roman';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 110px;
+        line-height: 110px;
+        color: $color__text-black-5;
+        padding-top: 69px;
+        span{
+            margin-left: 30%;
+            display: block;
+            font-size: 180px;
+            line-height: 180px;
+        }
+    }
+    .star-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    @media all and (max-width: 1024px) {
+        .title-relevant {
+            font-size: 55px;
+            line-height: 55px;
+            padding-top: 150px;
+            padding-left: 0;
+            justify-content: center;
+            span{
+                margin-left: 15%;
+                font-size: 95px;
+                line-height: 95px;
+            }
+        }
+        .star-icon {
+            overflow: hidden;
+
+            img {
+                position: relative;
+                right: -50px;
+                height: 130px;
+            }
+        }
+    }
+
+    @media  (max-width: 640px) {
+        .title-relevant {
+            span{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.wrapper-consultancy-relevant {
+    .btn-play {
+        z-index: 2;
+        width: 110px;
+        height: 110px !important;
+
+        img {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    .icon-play {
+        padding: 20px 15px 15px 25px;
+    }
+
+    @media (max-width: 768px) {
+        .btn-play {
+            width: 60px;
+            height: 60px !important;
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        .icon-play {
+            padding: 20px 15px 20px 20px;
+        }
+    }
+
+    .wrapper-content {
+        display: flex;
+        justify-content: space-between;
+        .consultancy-relevant {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                margin-bottom: 32px;
+                color: $color__sub;
+            }
+
+            p {
+                margin: 0;
+                margin-bottom: 32px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            flex-direction: column-reverse;
+            margin-top: 53px;
+
+            .consultancy-relevant {
+                padding-left: 0;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .consultancy-relevant {
+
+                h2 {
+                    font-size: 42px;
+                    line-height: 52px;
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    }
+
+    .wrapper-consultancy-video-relevant {
+        width: 50%;
+        position: relative;
+    
+        .video-relevant {
+            z-index: 1;
+            aspect-ratio: 768/576;
+            position: relative;
+            overflow: hidden;
+    
+            .thumbnail {
+                position: absolute;
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+                z-index: 2;
+            }
+            
+            .overlay {
+                background-color: #222222;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        @supports not (aspect-ratio: 768/576) {
+            .video-relevant::before {
+                float: left;
+                padding-top: 100%;
+                content: "";
+            }
+    
+            .video-relevant::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
+    
+        @media (max-width: 1024px) {
+            width: 100%;
+            margin-top: 56px;
+    
+            .video-relevant {
+                aspect-ratio: 768/576;
+            }
+            @supports not (aspect-ratio: 768/576) {
+                .video-relevant::before {
+                    float: left;
+                    padding-top: 100%;
+                    content: "";
+                }
+        
+                .video-relevant::after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+

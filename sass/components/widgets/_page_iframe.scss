@@ -1,0 +1,141 @@
+.wrapper-page-iframe{
+
+    .wrapper-page-iframe-banner {
+        background-color: $color__sub;
+        display: flex;
+    
+        .wrapper {
+            margin: auto;
+            padding: 192px 0 0;
+            
+            h1 {
+                color: $color__text-white;
+                @media (max-width: 768px) {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+
+    .wrapper-page-iframe-info {
+        background-color: $color__background-button;
+    
+        .bottom-header {
+            width: 100%;
+            height: 228px;
+            position: absolute;
+            background: black(1);
+    
+            @media (max-width: 768px) {
+                height: 349px;
+            }
+        }
+    
+        .wrapper-page-iframe-content {
+            padding-top: 52px;
+            padding-bottom: 150px;
+    
+            @media (max-width: 768px) {
+                padding-top: 40px;
+                padding-bottom: 70px;
+            } 
+        }
+    
+     
+        .wrapper-page-iframe {
+            position: relative;
+            // top: -176px;
+            background-color: $color__background-body;
+            margin: 0px 17%;
+    
+            @media (max-width: 1439px) {
+                margin: 0px 10%;    
+            }
+    
+            @media (max-width: 1024px) {
+                margin: 0px 5%;
+            }
+    
+            @media (max-width: 768px) {
+                width: 100%;
+                margin: 0px;
+            }
+    
+            hr {
+                border: 1px solid $color__text-black-10;
+                margin-bottom: 32px;
+    
+                @media (max-width: 768px) {
+                    margin-bottom: 22px;
+                }
+            }
+    
+            p {
+                margin: 0;
+                color: $color__secondary;
+    
+                @media screen {
+                    padding-bottom: 6px;
+                }
+            }
+    
+            .wrapper-content {
+                padding: 36px 68px;    
+    
+                @media (max-width: 768px) {
+                    padding: 24px 20px;
+                }
+    
+                .content-header {
+                    display: flex;
+                    position: relative;
+                    padding-bottom: 27px;
+    
+                    @media (max-width: 768px) {
+                        padding-bottom: 22px;
+                    }
+    
+                   
+                    
+                    h5 {
+                        width: 100%;
+                        color: $color__secondary;
+    
+                        @media (max-width: 768px) {
+                            display: none;
+                        }
+                    }
+    
+                    h3 {
+                        display: none;
+                        width: 100%;
+                        color: $color__secondary;
+    
+                        @media (max-width: 768px) {
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                }
+    
+                .content-body {
+                    display: block;
+                    height: 100vh;
+                    iframe {
+                        margin: 0px;
+                        padding: 0px;
+                        height: 100%;
+                        border: none;
+                        display: block;
+                        width: 100%;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

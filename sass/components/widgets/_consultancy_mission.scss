@@ -1,0 +1,140 @@
+.wrapper-consultancy-mission {
+    .btn-play {
+        z-index: 2;
+        width: 110px;
+        height: 110px !important;
+
+        img {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    .icon-play {
+        padding: 20px 15px 15px 25px;
+    }
+
+    @media (max-width: 768px) {
+        .btn-play {
+            width: 60px;
+            height: 60px !important;
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        .icon-play {
+            padding: 20px 15px 20px 20px;
+        }
+    }
+
+    .wrapper-content {
+        display: flex;
+        justify-content: space-between;
+        .consultancy-mission {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                margin-bottom: 32px;
+                color: $color__sub;
+            }
+
+            p {
+                margin: 0;
+                margin-bottom: 32px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            flex-direction: column-reverse;
+            margin-top: 53px;
+
+            .consultancy-mission {
+                padding-left: 0;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .consultancy-mission {
+
+                h2 {
+                    font-size: 42px;
+                    line-height: 52px;
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    }
+
+    .wrapper-consultancy-video-mission {
+        width: 50%;
+        position: relative;
+    
+        .video-mission {
+            z-index: 1;
+            aspect-ratio: 768/576;
+            position: relative;
+            overflow: hidden;
+    
+            .thumbnail {
+                position: absolute;
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+                z-index: 2;
+            }
+            
+            .overlay {
+                background-color: #222222;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        @supports not (aspect-ratio: 768/576) {
+            .video-mission::before {
+                float: left;
+                padding-top: 100%;
+                content: "";
+            }
+    
+            .video-mission::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
+    
+        @media (max-width: 1024px) {
+            width: 100%;
+            margin-top: 56px;
+    
+            .video-mission {
+                aspect-ratio: 768/576;
+            }
+            @supports not (aspect-ratio: 768/576) {
+                .video-mission::before {
+                    float: left;
+                    padding-top: 100%;
+                    content: "";
+                }
+        
+                .video-mission::after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+

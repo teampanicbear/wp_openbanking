@@ -1,0 +1,34 @@
+.wrapper-partner-become {
+    .wrapper-partner-content {
+        padding: 85px 0 102px 0;
+
+        @media (max-width: 1440px) {
+            padding: 85px 10% 102px 10%;    
+        }
+
+        @media (max-width: 768px) {
+            padding: 93px 20px 89px 20px;
+        }
+
+        .wrapper-content-left {
+            h2 {
+                display: none;
+            }
+    
+            h3 {
+                display: flex;
+            }
+    
+            @media (max-width: 768px) {
+                h2 {
+                    display: flex;
+                    width: 70%;
+                }
+    
+                h3 {
+                    display: none;
+                }
+            }
+        }
+    }
+}

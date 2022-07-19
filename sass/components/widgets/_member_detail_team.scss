@@ -1,0 +1,17 @@
+.wrapper-member-detail-team {
+    margin-bottom: 180px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 70px;
+    }
+
+    .title {
+        text-align: center;
+        color: $color__sub;
+        margin-bottom: 60px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+    }
+}

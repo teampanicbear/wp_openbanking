@@ -1,0 +1,214 @@
+.wrapper-upcoming-campfire {
+    padding-top: 54px;
+    background-color: $color__border-input-hover;
+    overflow: hidden;
+    padding-bottom: 100px;
+
+    .wrapper-content {
+        display: flex;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            margin-top: 28px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding-top: 60px;
+        padding-bottom: 80px;
+        .heading {
+            font-size: 70px;
+            line-height: 70px;
+            display: block;
+        }
+    }
+}
+
+
+.primary-video {
+    .thumbnail {
+        background-size: cover !important;
+        aspect-ratio: 1.78;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+			height: 436px;
+		}
+
+        @media (max-width: 768px) {
+            height: 190px;
+        }
+        .icon-attend{
+            display: none;
+        }
+    }
+    @supports not (aspect-ratio: 1.78) {
+        .thumbnail::before {
+            float: left;
+            padding-top: 55%;
+            content: "";
+        }
+
+        .thumbnail::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+    
+    .info-video-primary {
+        display: flex;
+        margin-top: 20px;
+
+        .date {
+            background-color: $color__sub;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $color__text-05;
+            margin-right: 27px;
+
+            h4 {
+                color: $color__text-white;
+            }
+
+            @media (max-width: 728px) {
+                width: 80px;
+                height: 80px;
+                margin-right: 20px;
+            }
+        }
+
+        .detail {
+            width: 65%;
+
+            @media (max-width: 728px) {
+                width: 70%;
+            }
+
+            .time {
+                display: flex;
+                align-items: center;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                width: 100%;
+                line-height: 22px;
+                color: $color__text-black-60;
+                margin-bottom: 8px;
+
+                .livestream {
+                    margin-right: 25px;
+
+                    @media (max-width: 728px) {
+                        margin-right: 20px;
+                    }
+                }
+
+                .stopwatch {
+                    margin-right: 8px;
+                }
+            }
+
+            .title {
+                color: $color__sub;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color__text-gold;
+                }
+            }
+        }
+    }
+}
+
+.list-upcoming-video {
+    margin-left: 24px;
+    padding: 20px;
+    background-color: $color__background-body;
+
+    @media (max-width: 1024px) {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .title-upcoming {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 23px;
+
+        a {
+            color: $color__text-gold;
+            text-decoration: none;
+        }
+    }
+}
+
+.item-video {
+    display: flex;
+    padding: 17px 0;
+    border-top: 1px solid $color__split-1;
+    position: relative;
+    .item-image {
+        position: relative;
+    }
+
+    .thumbnail-item {
+        width: 150px;
+        max-width: 150px;
+        margin-right: 14px;
+        aspect-ratio: 1.78;
+        object-fit: cover;
+
+        @media (max-width: 728px) {
+            width: 110px;
+        }
+    }
+
+    .icon-live {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+        @media (max-width: 728px) {
+            width: 57px;
+            height: 24px;
+        }
+    }
+    
+    .title{
+        min-height: 44px;
+    }
+
+    .title-video {
+        color: $color__text-black;
+        text-decoration: none;
+
+        &:hover {
+            color: $color__text-gold;
+        }
+    }
+
+    .date-time {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 5px;
+        color: $color__text-black-60;
+        margin-bottom: 20px;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.wrapper-our-value {
+    padding-top: 154px;
+    padding-bottom: 150px;
+
+    .border-card {
+        width: calc(33% - 32px);
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    h2 {
+        color: $color__sub;
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: 60px;
+        padding-top: 60px;
+
+        .card-container {
+            flex-direction: column;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            font-size: 42px;
+            line-height: 52px;
+        }
+    }
+
+    .value-logo {
+        padding-top: 34px;
+
+        @media (max-width) {
+            padding-top: 24px;
+        }
+    }
+}

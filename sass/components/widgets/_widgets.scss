@@ -1,0 +1,595 @@
+
+@import "latestBlog";
+
+@import "testimonial";
+
+.text-20-normal {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.widget {
+	// margin: 0 0 1.5em;
+
+	// Make sure select elements fit in widgets.
+	select {
+		max-width: 100%;
+	}
+}
+
+.row-panel-no-bottom {
+	.panel-grid-cell {
+		.so-panel {
+			margin-bottom: 0 !important;
+			position: relative;
+		}
+	}
+}
+
+.wrapper {
+	max-width: 1600px;
+	margin: auto;
+
+	@media (max-width: 1960px) {
+		max-width: 1152px;
+	}
+
+	@media (max-width: 1440px) {
+		max-width: 1440px;
+		padding: 0 10%;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		padding: 0 20px;
+	}
+}
+
+.on-click-link{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-icon {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+	// background-color: $color__secondary;
+	background-color: $color__border-05;//$color__text-black-5;
+	&:nth-child(2) {
+		margin-left: 1px;
+	}
+	svg path {
+		stroke: $color__text-03;
+	}
+	
+	&:hover {
+		svg path {
+			stroke: $color__primary;
+		}
+		// todo
+		background-color: $color__text-01;//$color__text-01;
+	}
+
+	&.btn-white {
+		background-color: $color__text-black-5;
+		svg path {
+			stroke: $color__text-black-50;
+		}
+
+		&:hover {
+			svg path {
+				stroke: $color__primary;
+			}
+			// todo
+			background-color: $color__text-black-10;//$color__text-01;
+		}
+
+		@media (max-width: 1024px) {
+			background-color: $color__background-button;
+
+			&:hover {
+				background-color: #e8e8e7;
+			}
+		}
+	}
+}
+
+.slide-controls {
+	display: flex;
+}
+
+.btn, button {
+	cursor: pointer;
+	position: relative;
+	border: 0;
+    outline: 0;
+	font-size: 16px;
+    line-height: 24px;
+	font-weight: 500;
+	transition: 0.3s;
+}
+
+.form-control-inline {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	input {
+		min-height: 48px;
+		outline: none;
+		border: none;
+		box-shadow: none;
+		margin: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		border-radius: 0;
+	}
+	button {
+		outline: none;
+		border: none;
+		box-shadow: none;
+		margin: 0;
+		min-height: 48px;
+		border-radius: 0;
+	}
+}
+
+.form-control-input {
+	padding-bottom: 10px;
+	input {
+		width: 100%;
+		height: 48px;
+		text-indent: 16px;
+		background: $color__border-input-hover;
+		margin-top: 12px;
+		border: 0px;
+		border-radius: 0px;
+
+		&:hover{
+			outline: none;
+		}
+
+		&:focus{
+			outline: none;
+		}
+
+		&::placeholder {
+			color: $color__text-black-30;
+		}
+	}
+}
+
+ 
+.checkbox {
+	-webkit-appearance: none;
+	width: 20px;
+	min-height: 20px !important;
+	outline: none;
+	border: 0px;
+	background-color:  $color__border-input-hover;
+	margin-right: 10px 
+	!important;
+	padding:  0px !important;
+	cursor: pointer;
+		
+	&::before { 
+		position: relative;
+		content: '';
+		display: block;
+		top: 3px;
+		left: 7px;
+		width: 6px;
+		height: 11px;
+		border-style: solid;
+		border-color: $color__sub;
+		border-width: 0 2.5px 2.5px 0;
+		transform: rotate(45deg);
+		opacity: 0;
+		transition: opacity 0.3s;		
+	}
+	&:checked {
+		background: $color__primary;
+		&::before {
+			opacity: 1;
+		}
+		~ label::before {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+}
+
+.btn-black {
+	background-color: $color__secondary;
+	color: $color__primary;
+
+	&:hover {
+		background-color: $color__background-black;
+	}
+}
+.ndialog-wrap {
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+    z-index: -1;
+    position: absolute;
+	transition: visibility 0s, opacity 0.3s linear;
+
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: $color__background-black-90;
+}
+.check-email-dialog-wrap {
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+    z-index: -1;
+    position: absolute;
+	transition: visibility 0s, opacity 0.3s linear;
+
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: $color__background-black-90;
+}
+
+
+.pop-up {
+	// display: none; 
+	visibility: hidden;
+	opacity: 0;
+    z-index: -1;
+    position: absolute; 
+	transition: visibility 0s, opacity 0.3s linear;
+
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: $color__background-black-90;
+
+	.sig-container-item {
+		position: relative;
+
+		.close-pop-up {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			cursor: pointer;
+		}
+	}
+
+    @media (max-width: 376px) {
+        width: 100%;
+    }
+}
+
+.select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: $color__text-03;
+    width: 100%;
+    height: 48px;
+}
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+}
+  
+
+.selected-after {
+    color: $color__text-white;
+}
+
+.selected-before {
+    color: $color__text-black;
+}
+
+.select-styled {
+    display: flex;
+    align-items: center;
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white(0.05);
+    padding: 8px 15px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 30%;
+        right: 18px;
+        width: 11px;
+        height: 11px;
+        border: 2px solid;
+        border-color: transparent transparent $color__text-02 $color__text-02;
+        transform: rotate(-45deg);
+    }
+
+    &:hover {
+        background-color: darken(white(0.05), 2);
+    }
+    
+    &:active, &.active {
+        color: $color__text-black;
+        background-color: darken($color__text-white, 5);
+      
+      &:after {
+        top: 30%;
+        right: 18px;
+        color: $color__primary;
+        // transform: rotate(135deg);
+        border-color: transparent transparent $color__primary $color__primary;
+      }
+    }
+}
+  
+.select-options {
+    display: none; 
+    position: absolute;
+    top: 110%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    list-style: none;
+    background-color: darken($color__text-white, 5);
+    transition: all 0.15s ease-in;
+
+    li {
+      margin: 0;
+      padding: 12px 0;
+      text-indent: 15px;
+      color: $color__text-black;
+      transition: all 0.15s ease-in;
+      
+      &:hover {
+        color: $color__text-black;
+        background-color: $color__primary-hover;
+      }
+      
+      &[rel="hide"] {
+        display: none;
+      }
+    }
+}
+
+.site-main .elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0;
+}
+.site-main .elementor-section.elementor-section-boxed > .elementor-container {
+	max-width: none;
+}
+
+
+// animation title
+.schero .--reveal, .schero .--fade-in {
+    // opacity: 0;
+}
+// end
+
+.site-header .content-header {
+	transition: 0.3s;
+}
+.mobile-menu-open {
+	overflow: hidden;
+	
+	@media (max-width: 768px) {
+		.site-header .content-header {
+			transition: 0.3s;
+			background-color: $color__secondary;
+		}
+	}
+}
+
+// flex helper
+.flex {
+    display: flex;
+}
+.flex-1 {
+    flex: 1;
+}
+.p20 {
+    padding: 20px;
+}
+.m16-lr {
+	margin: 0 16px;
+}
+.minus-m16-lr {
+	margin: 0 -16px;
+}
+// end
+
+@import "banner";
+
+@import "problem";
+
+@import "benefit";
+
+@import "campfire";
+
+@import "campfire_blog";
+
+@import "campfire_detail";
+
+@import "appathon";
+
+@import "our_partner";
+
+@import "strategic_partners";
+
+@import "subscribe";
+
+@import "speaker_campfire";
+
+@import "upcoming_campfire";
+
+@import "previous";
+
+@import "signin";
+
+@import "tooltips";
+
+@import "insight_event";
+
+@import "insight_info";
+
+@import "card";
+
+@import "insight_intro";
+
+@import "about_our_value";
+
+@import "about_meeting";
+
+@import "about_media";
+
+@import "about_our_mission";
+
+@import "about_banner";
+
+@import "speaker_detail_campfire";
+
+@import "speaker_detail_banner";
+
+@import "speaker_detail_other";
+
+@import "speaker_banner";
+
+@import "speaker_become";
+
+@import "speaker_member";
+
+@import "trail_effects.scss";
+
+@import "blog_popular";
+
+@import "blog_banner";
+
+@import "blog_news_letter";
+
+@import "blog_category";
+
+@import "blog_page_category";
+
+@import "blog_article";
+
+@import "blog_detail_banner";
+
+@import "blog_detail_content";
+
+@import "blog_detail_event";
+
+@import "my_account_edit";
+
+@import "my_account_banner";
+
+@import "my_account_info";
+
+@import "trail_effects.scss";
+
+@import "pr_service_banner";
+
+@import "pr_service_become";
+
+@import "pr_service_consultant";
+
+@import "sponsor_detail_banner";
+
+@import "sponsor_detail_other";
+
+@import "sponsor_detail_become";
+
+@import "partner_banner";
+
+@import "partner_event";
+
+@import "partner_consultancy";
+
+@import "partner_out_package";
+
+@import "partner_sidebar";
+
+@import "partner_become";
+
+@import "sign_up";
+
+@import "pr_service_content";
+
+@import "member_detail_banner";
+
+@import "member_detail_team";
+
+@import "appathon_banner";
+
+@import "appathon_rules";
+
+@import "appathon_more";
+
+@import "appathon_judges";
+
+@import "appathon_get_started";
+
+@import "appathon_look_out";
+
+@import "appathon_winner";
+
+@import "appathon_awards";
+
+@import "appathon_wealth";
+
+@import "appathon_timeline";
+
+@import "terms_banner";
+
+@import "terms_content";
+
+@import "promo_popup";
+@import "change_password";
+
+@import "page_iframe";
+
+@import "page_404";
+
+@import "slick_dots";
+
+//@page consultancy
+@import "consultancy_intro";
+@import "consultancy_mission";
+@import "consultancy_service";
+//@page brazil
+@import "brazil_relevant";
+@import "brazil_connect";
+@import "brazil";
+@import "brazil_partner";
+.btn-attend{
+	height: 32px;
+	width: 100px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.attended{
+	background: #babab9;
+	cursor: default;
+	&:hover{
+		background: #babab9;
+	}
+}

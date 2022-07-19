@@ -1,0 +1,59 @@
+.wrapper-other-speaker {
+    padding-top: 60px;
+    padding-bottom: 140px;
+    background-color: $color__border-input-hover;
+
+    @media (max-width: 768px) {
+        padding-bottom: 60px;
+    }
+
+    .btn-white {
+        background-color: $color__text-black-5;
+    }
+
+    .btn-border {
+        display: none;
+        min-width: 140px;
+        height: 60px;
+        margin: auto;
+        margin-top: 60px;
+
+        @media (max-width: 768px) {
+            min-width: 200px;
+            display: block;
+        }
+    }
+
+    .wrapper-title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 36px;
+
+        h2 {
+            color: $color__sub;
+        }
+
+        @media (max-width: 768px) {
+            .slide-controls {
+                display: none;
+            }
+        }
+    }
+
+    .list-item {
+        margin: -16px;
+
+        .wrapper-item {
+            padding: 16px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0;
+
+            .wrapper-item {
+                margin: 0;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

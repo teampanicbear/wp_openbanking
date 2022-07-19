@@ -1,0 +1,70 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	// border: 1px solid;
+	border-color: $color__border-button;
+	// border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		// border-color: $color__border-button-focus;
+	}
+}
+
+.btn-primary {
+	padding: 0 30px;
+	min-width: 150px;
+	width: fit-content;
+    height: 60px;
+    background-color: $color__primary;
+    font-size: 16px;
+	line-height: 24px;
+    cursor: pointer;
+    font-weight: 500;
+	display: flex;
+	align-items: center;
+	color: $color__secondary;
+	border-radius: 0px !important;
+	justify-content: center;
+	border: none !important;
+	text-decoration: none;
+	transition: 0.3s;
+
+	&:hover {
+		color: $color__secondary;
+		background-color: $color__primary-hover;
+	}
+}
+
+
+.btn-border {
+    min-width: 109px;
+    height: 32px;
+	width: fit-content;
+	padding: 6px 25px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color__sub;
+    border: 1px solid $color__primary!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: $color__transparent;
+
+	&:hover {
+		border: 1px solid $color__sub !important;
+		color: $color__sub;
+	}
+}

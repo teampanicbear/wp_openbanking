@@ -1,0 +1,59 @@
+.wrapper-pr-banner {
+    @media (max-width: 1024px) {
+        background-color: $color__text-black-5;
+    }
+    
+    .container {
+        background-color: $color__sub;
+        height: 820px;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            height: 670px;
+        }
+    }
+
+    .wrapper-content {
+        margin-top: -620px;
+        text-align: center;
+
+        .site-name {
+            color: $color__text-white;
+            margin-bottom: 32px;
+        }
+        
+        .intro {
+            color: $color__text-09;
+            padding: 0 20%;
+            margin-bottom: 80px;
+        }
+
+        .thumbnail {
+            aspect-ratio: 1166/621;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin-top: -530px;
+
+            .intro {
+                padding: 0;
+            }
+
+            .thumbnail {
+                //aspect-ratio: 336/300;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

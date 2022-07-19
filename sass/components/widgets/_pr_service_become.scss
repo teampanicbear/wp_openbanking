@@ -1,0 +1,23 @@
+.wrapper-pr-become {
+    background-color: $color__text-black-5;
+    padding: 90px 20%;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        padding: 70px 0px;
+    }
+
+    .title {
+        color: $color__sub;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        color: $color__sub;
+        margin-bottom: 32px;
+    }
+
+    .btn-primary {
+        margin: auto;
+    }
+}

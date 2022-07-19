@@ -1,0 +1,73 @@
+.wrapper-about-meeting {
+    background-color: $color__border-input-hover;
+    padding-bottom: 128px;
+
+    @media (max-width: 768px) {
+        padding-bottom: 70px;
+    }
+
+    .intro {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 88px;
+        padding-top: 130px;
+
+        .title {
+            color: $color__sub;
+            width: 33%;
+        }
+
+        .content {
+            @include text-20-light;
+            width: 66%;
+            margin: 0;
+            padding-right: 8%;
+            padding-bottom: 7px;
+        }
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 56px;
+
+            .title {
+                margin-bottom: 14px;
+                width: 100%;
+            }
+
+            .content {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding-top: 60px;
+
+            .title {
+                font-size: 42px;
+                line-height: 52px;
+            }
+        }
+    }
+}
+
+.card-container {
+    flex-wrap: wrap;
+
+    .wrapper-card {
+        width: calc(25% - 32px);
+        margin-bottom: 28px;
+    }
+
+    @media (max-width: 1024px) {
+        .wrapper-card {
+            width: calc(33% - 32px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .wrapper-card {
+            width: calc(50% - 32px);
+        }
+    }
+}

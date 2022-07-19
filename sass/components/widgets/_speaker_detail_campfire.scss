@@ -1,0 +1,11 @@
+.wrapper-own-campfire {
+    .list-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .title {
+        color: $color__sub;
+        margin-bottom: 40px;
+    }
+}

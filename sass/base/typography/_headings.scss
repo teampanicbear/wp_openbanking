@@ -1,0 +1,156 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+h1 {
+	font-size: 60px;
+	line-height: 68px;
+	font-family: $font__heading;
+	font-weight: lighter;
+	margin: 0;
+
+	@media (max-width: $heading__mobile_breakpoint) {
+		font-size: 42px;
+		line-height: 52px;
+	}
+}
+
+h2 {
+	font-size: 52px;
+	line-height: 64px;
+	font-family: $font__heading;
+	font-weight: lighter;
+	margin: 0;
+
+	@media (max-width: $heading__mobile_breakpoint) {
+		font-size: 32px;
+		line-height: 42px;
+	}
+}
+
+h3 {
+	font-size: 44px;
+	line-height: 53px;
+	font-family: $font__heading;
+	font-weight: lighter;
+	margin: 0;
+	
+	@media (max-width: $heading__mobile_breakpoint) {
+		font-size: 24px;
+		line-height: 34px;
+	}
+}
+
+h4 {
+	font-size: 36px;
+	line-height: 44px;
+	font-family: $font__heading;
+	font-weight: lighter;
+	margin: 0;
+	
+	@media (max-width: $heading__mobile_breakpoint) {
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+
+h5 {
+	font-size: 28px;
+	line-height: 36px;
+	font-family: $font__heading;
+	font-weight: lighter;
+	margin: 0;
+}
+
+h6 {
+	font-size: 20px;
+	line-height: 30px;
+	font-family: $font__heading;
+	font-weight: lighter;
+	margin: 0;
+}
+
+@mixin text-20-light {
+	font-family: 'DIN 2014 Light';
+	font-size: 20px;
+	line-height: 1.5;
+}
+.text-20-light {
+	@include text-20-light
+}
+
+@mixin text-20-bold {
+	font-family: 'DIN 2014 DemiBold';
+	font-size: 20px;
+	line-height: 1.5;
+}
+.text-20-bold {
+	@include text-20-bold
+}
+
+@mixin text-16-normal {
+	font-family: 'DIN 2014 Regular';
+	font-size: 16px;
+	line-height: 1.5;
+	a {
+		color: #404040;
+		&:hover {
+			color: #070707;
+		}
+	}
+}
+
+.text-16-normal {
+	@include text-16-normal
+}
+
+@mixin text-16-bold {
+	font-family: 'DIN 2014 DemiBold';
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.text-16-bold {
+	@include text-16-bold
+}
+
+@mixin text-14-normal {
+	font-family: 'DIN 2014 Regular';
+	font-size: 14px;
+	line-height: 22px;
+}
+.text-14-normal {
+	@include text-14-normal
+}
+
+@mixin text-14-bold {
+	font-family: 'DIN 2014 DemiBold';
+	font-size: 14px;
+	line-height: 22px;
+}
+.text-14-bold {
+	@include text-14-bold
+}
+
+@mixin text-12-normal {
+	font-family: 'DIN 2014 Regular';
+	font-size: 12px;
+	line-height: 20px;
+}
+.text-12-normal {
+	@include text-12-normal
+}
+
+@mixin text-12-bold {
+	font-family: 'DIN 2014 Bold';
+	font-size: 12px;
+	line-height: 20px;
+}
+.text-12-bold {
+	@include text-12-bold
+}

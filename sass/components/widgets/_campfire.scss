@@ -1,0 +1,277 @@
+.wrapper-campfire {
+    min-height: 957px;
+    width: 100%;
+    position: relative;
+    width: 100%;
+
+    .banner-campfire {
+	    background-size: cover !important;
+        background-attachment: fixed !important;
+        width: 100%;
+        height: 751px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .wrapper-bottom-campfire {
+        margin-top: -324px;
+        display: flex;
+        align-items: flex-end;
+        min-height: 520px;
+
+        .intro-join-campfire {
+            width: 604px;
+            height: fit-content;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)), $color__background-body;
+            margin-right: 33px;
+            margin-left: -144px;
+    
+            .content-intro {
+                padding: 56px 70px 62px 144px;
+
+                .logo-campfire {
+                    img {
+                        height: 48px;
+                    }
+                }
+            }
+    
+            .title-campfire {
+                width: 300px;
+                color: $color__secondary;
+                margin-bottom: 20px;
+            }
+        
+            .content-campfire {
+                width: 390px;
+                color: $color__secondary;
+                margin-bottom: 38px;
+            }
+    
+            .wrapper-action-campfire {
+                display: flex;
+                align-items: center;
+    
+                .btn-register-campfire {
+                    margin-right: 36px;
+                }
+    
+                .see-all-campfire {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $color__text-gold;
+                    height: fit-content;
+                }
+            }
+        }
+    
+        .upcoming-campfire {
+            width: 578px;
+            display: flex;
+            flex-direction: column;
+    
+            .heading-campfire {
+                margin-top: 4px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+                
+                span {
+                    margin-left: 10px;
+                    color: $color__text-black-90;
+                }
+            }
+    
+            .wrapper-content {
+                display: flex;
+                align-items: flex-end;
+    
+                .bg-upcoming-campfire {
+                    min-width: 200px;
+                    aspect-ratio: 1.78;
+                    object-fit: cover;
+                    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/bg-upcoming-campfire.png') no-repeat center center;
+                    background-size: cover;
+                    position: relative;
+    
+                    .bg-img {
+                        position: absolute;
+                        margin: auto;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0
+                    }
+                }
+    
+                @supports not (aspect-ratio: 1.78) {
+                    .bg-upcoming-campfire::before {
+                        float: left;
+                        padding-top: 55%;
+                        content: "";
+                    }
+
+                    .bg-upcoming-campfire::after {
+                        display: block;
+                        content: "";
+                        clear: both;
+                    }
+                }
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 31px;
+                    width: 100%;
+    
+                    .time-upcoming {
+                        display: flex;
+                        height: 34px;
+                        align-items: center;
+                        padding-bottom: 12px;
+                        border-bottom: 1px solid $color__split-1;
+                        margin-bottom: 13px;
+    
+                        .date-time {
+                            margin-right: 24px;
+                            display: flex;
+                            align-items: center;
+    
+                            span {
+                                margin-left: 8px;
+                                color: $color__text-black-60;
+                            }
+                        }
+                    }
+    
+                    .title-upcoming {
+                        color: $color__secondary;
+                        margin-bottom: 17px;
+                        text-decoration: none;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+
+                        &:hover {
+                            color: $color__text-gold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 1024px) {
+        .banner-campfire {
+            background-attachment: scroll !important;
+        }
+
+        .wrapper-bottom-campfire {
+            flex-direction: column;
+            padding-bottom: 80px;
+            align-items: center;
+
+            .intro-join-campfire {
+                margin-right: 0;
+                margin-bottom: 30px;
+                margin-left: 0;
+                height: fit-content;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+    
+                .content-intro {
+                    text-align: center;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    .content-campfire {
+                        padding: 0 20px;
+                    }
+    
+                    .logo-campfire {
+                        img {
+                            height: 70px;
+                        }
+                        margin-bottom: 30px;
+                    }
+    
+                    h2, div {
+                        width: auto;
+                    }
+    
+                    .wrapper-action-campfire {
+                        flex-direction: column;
+                        align-items: center;
+    
+                        .btn-register-campfire {
+                            margin: 0;
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+
+            .upcoming-campfire {
+                width: 100%;
+                height: auto;
+    
+                .heading-campfire {
+                    margin-bottom: 12px;
+                    justify-content: center;
+                }
+    
+                .wrapper-content {
+                    flex-direction: column;
+                    position: static;
+                    align-items: baseline;
+    
+                    .bg-upcoming-campfire {
+                        margin-bottom: 28px;
+                        margin-right: 0;
+                        width: 100%;
+                        height: 300px;
+                    }
+    
+                    .content {
+                        width: 100%;
+                        padding-left: 0;
+                        align-items: center;
+
+                        .time-upcoming {
+                            width: 100%;
+                            justify-content: center;
+                        }
+
+                        .title-upcoming {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 376px) {
+        .banner-campfire {
+            height: 300px;
+        }
+        .wrapper-bottom-campfire {
+            margin-top: -80px;
+        }
+        
+        .upcoming-campfire {
+            .wrapper-content {
+                .bg-upcoming-campfire {
+                    height: 190px !important;
+                }
+            }
+        }
+    }
+}

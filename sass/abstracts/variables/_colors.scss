@@ -1,0 +1,68 @@
+$color__background-black: #000;
+$color__background-black-90: rgba(0, 0, 0, 0.9);
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #F4F4F3;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: #4169e1; //royalblue
+$color__link-visited: #800080; //purple
+$color__link-hover: #191970; //midnightblue
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+$color__border-header: rgba(255, 255, 255, 0.1);
+
+$color__primary: #FEBF10;
+$color__primary-hover: #FFA800;
+$color__sub: #1C1B18;// todo remove use secondary
+$color__secondary: #1C1B18;
+$color__text-gold: #B08A2E;
+$color__background-problem: #171717;
+$color__bg-03:rgba(0, 0, 0, 0.3);
+$color__bg-header:rgba(0, 0, 0, 0.2);
+$color__text-white: white;
+$color__text-black: black;
+$color__text-07: rgba(255, 255, 255, 0.7);
+$color__text-06: rgba(255, 255, 255, 0.6);
+$color__text-01: rgba(255, 255, 255, 0.1);
+$color__text-02: rgba(255, 255, 255, 0.2);
+$color__text-03: rgba(255, 255, 255, 0.3);
+$color__text-04: rgba(255, 255, 255, 0.4);
+$color__text-05: rgba(255, 255, 255, 0.5);
+$color__text-08: rgba(255, 255, 255, 0.8);
+$color__text-09: rgba(255, 255, 255, 0.9);
+$color__border-05: rgba(255, 255, 255, 0.05);
+$color__text-header: red;
+$color__split-1: rgba(28, 27, 24, 0.1);
+$color__border-input-hover: rgba(28, 27, 24, 0.05);
+$color__text-black-5: rgba(28, 27, 24, 0.05);
+$color__text-black-30:rgba(28, 27, 24, 0.3);
+$color__text-black-80: rgba(28, 27, 24, 0.8);
+$color__text-black-70: rgba(28, 27, 24, 0.7);
+$color__text-black-90: rgba(28, 27, 24, 0.9);
+$color__text-black-50: rgba(28, 27, 24, 0.5);
+$color__text-black-60: rgba(28, 27, 24, 0.6);
+$color__text-black-10: rgba(28, 27, 24, 0.1);
+$color__text-black-20: rgba(28, 27, 24, 0.2);
+$color__icon-black-01: rgba(128, 128, 125, 1);
+$color__transparent: transparent;
+$color__2B: #2b2b2b;
+$color__FA: #fafafa;
+
+@function black($opacity: 1) {
+    @return rgba(28, 27, 24, $opacity);
+}
+
+@function white($opacity: 1) {
+    @return rgba(255, 255, 255, $opacity);
+}

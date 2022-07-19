@@ -1,0 +1,119 @@
+.wrapper-blog-detail-banner {
+    background-color: $color__sub;
+
+    .wrapper-detail-banner-content {
+
+        .wrapper-banner-logo {
+            position: absolute;
+            top: 84px;
+            right: 0px;
+            overflow: hidden;
+            
+            @media (max-width: 768px) {
+                width: 327px;
+            }
+
+            .banner-logo {
+                opacity: 0.2;
+                filter: grayscale(1);
+                margin-top: -68px;
+                margin-left: 210px;
+                margin-right: -212px;
+                height: 490px;
+                
+                @media (max-width: 768px) {
+                    margin-top: -32px;
+                    margin-left: 194px;
+                    width: 243px;
+                    height: auto;
+                }
+            }
+        }
+
+        .banner-show {
+            padding: 188px 15% 406px 15%;
+            text-align: center;
+            display: block;
+
+            @media (max-width: 1024px) {
+                padding: 188px 50px 220px 50px;    
+            }
+
+            @media (max-width: 768px) {
+                padding: 120px 0px 136px 0px;    
+            }
+
+            span {
+                color: $color__text-05;
+                
+                a {
+                    color: $color__text-05;
+                    margin: 0px 12px;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    
+                    &:hover {
+                        color: $color__primary;
+                    }
+                }
+            }
+
+            h4 {
+                color: $color__primary;
+                padding: 12px 100px 26px 100px;
+
+                @media (max-width: 1024px) {
+                    padding: 20px 0px;
+                    font-size: 24px;
+                }
+            }
+
+            hr {
+                background-color: $color__text-01;
+                margin-bottom: 19px;
+            }
+
+            .banner-show-info {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 17px;
+
+                div {
+                    color: $color__text-05;
+                    padding: 0;
+                    justify-content: center;
+                    display: flex;
+
+                    img {
+                        margin-right: 12px;
+                    }
+
+                    a {
+                        color: $color__text-05;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $color__primary;
+                        }
+                    }
+                }
+
+                .info-left {
+                    padding-right: 35px;
+
+                    @media (max-width: 768px) {
+                        padding-right: 20px;
+                    }
+                }
+
+                .info-right {
+                    padding-left: 35px;
+                    
+                    @media (max-width: 768px) {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

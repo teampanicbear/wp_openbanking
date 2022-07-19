@@ -1,0 +1,45 @@
+.brazil-partner.sponsor-container {
+    margin-top: 50px;
+	margin-bottom: 120px;
+    position: relative;
+	.partner-content{
+		margin-top: 190px;
+	}
+	.partner-container .partner-card{
+		position: absolute;
+		right: 100px;
+		top: -170px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.brazil-partner.sponsor-container {
+		margin-top: 150px;
+		padding-top: 150px;
+		position: relative;
+		.partner-content{
+			margin-top: 35px;
+		}
+		
+		.partner-container .partner-card {
+			padding: 76px 102px 40px 144px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.brazil-partner.sponsor-container {
+		.partner-container .partner-card{
+			right: 0;
+			left: 0;
+		}
+		
+	}
+}
+@media (max-width: 640px) {
+	.brazil-partner.sponsor-container {
+		.partner-container .partner-card {
+			padding: 35px;
+		}
+	}
+}

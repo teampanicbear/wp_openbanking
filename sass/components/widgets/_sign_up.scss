@@ -1,0 +1,322 @@
+.wrapper-signup {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1000000;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: black(1);
+
+    @media (max-width: 768px) {
+        overflow: visible;
+    }
+
+    .sign-up-logo {
+        z-index: 10;
+        position: relative;
+        top: 60px;
+        left: 60px;
+
+        @media (max-width: 768px) {
+            top: 20px;
+            left: 20px;
+            height: 10%;
+        }
+    }
+
+    .sign-up-background {
+        overflow: hidden;
+
+        position: fixed;
+
+        img {
+            filter: brightness(0.5);
+            z-index: 0;
+            position: relative;
+            left: -555px;
+            max-width: none !important;
+            height: 100vh !important;
+
+            @media (max-width: 768px) {
+                max-width: 100% !important;
+                height: auto !important;
+                left: 0px;
+            }
+        }
+    }
+
+    hr {
+        border: 1px solid $color__text-01;
+        display: block;
+        width: 100%;
+    }
+
+    .sign-up-form {
+        position: absolute;
+        display: flex;
+        width: 100% / 3 * 2;
+        height: 100%;
+        margin: auto;
+        z-index: 1;
+        right: 0px;
+        background-color: black(1);
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: 57%;
+        }
+
+       .wpforms-field-checkbox ul li{
+           display: flex;
+        }
+
+        div#wpforms-566-field_11-container {
+            margin-bottom: 20px;
+        }
+        div#wpforms-566-field_12-container {
+            margin-bottom: 20px;
+        }
+        
+        .wpforms-field input[type=checkbox]{
+            -webkit-appearance: none;
+            width: 20px;
+            min-height: 20px;
+            line-height: 20px;
+            outline: none;
+            border: 0px;
+            border-radius: 0px;
+            background-color:rgba(255, 255, 255, 0.05);
+            margin-right: 10px !important;
+            cursor: pointer;
+            margin-left: 0;
+            &:checked{
+                background: #febf10 !important;
+                &::before {
+                    opacity: 1;
+                }
+            }
+            &::before {
+                position: relative;
+                content: '';
+                display: block;
+                top: 3px;
+                left: 6px;
+                width: 7px;
+                height: 12px;
+                border-style: solid;
+                border-color: #1C1B18;
+                border-width: 0 3.5px 3.5px 0;
+                transform: rotate(45deg);
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            &+label{
+                display: inline-block;
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+       
+        div.wpforms-container-full{
+            width: 100%;
+            .wpforms-form{
+                .wpforms-one-half{
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        margin-left: 0;
+                      
+                    }
+                }
+                .wpforms-field {
+                    padding:0;
+                }
+                button[type=submit]{
+                    background-color:#FEBF10;
+                    width: 100%;
+                    text-align: center;
+                    border-color: transparent;
+                    &:hover {
+                        color: #1C1B18;
+                        background-color: #FFA800;
+                    }
+                }
+                .wpforms-submit-spinner{
+                    position: absolute;
+                    left: 80%;
+                    top: 20px;
+                }
+                select{
+                    color: rgba(255, 255, 255, 0.3);
+                    background-color: white(0.05);
+                    margin-bottom: 20px;
+                    width: 100%;
+                    border-color: transparent;
+                    height: 48px;
+                    border-radius: 0px;
+                    font-weight: 300;
+                    padding-left: 10px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    background-repeat: no-repeat;
+                    background-position-x: calc(100% - 20px);
+                    padding-right: 50px;
+                    background-position-y: 50%;
+                    background-image: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.16602 1.66666L6.99935 7.49999L12.8327 1.66666' stroke='white' stroke-opacity='0.2' stroke-width='2'/%3E%3C/svg%3E%0A");
+                    &:focus {
+                        color: $color__text-black;
+                        background-color: $color__text-white;
+                    }
+                }
+            }
+        }
+       
+        .wrapper-form {
+            width: 100%;
+            padding: 31px 194px 52px 194px;
+            @media (min-width: 1600px) {
+                padding: 31px 194px 92px 194px;
+            }
+            margin: auto;
+            background-color: #1c1b18;
+            @media (max-width: 1024px) {
+                padding: 0px 100px;
+            }
+
+            @media (max-width: 768px) {
+                padding: 20px;
+                background-color: black(1);
+            }
+
+            .form-header {
+                padding-bottom: 20px;
+
+                h4 {
+                    color: $color__background-body;
+                }
+
+                p {
+                    color: $color__text-05;
+                }
+                
+                .header-action {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    a {
+                        color: $color__primary;
+                    }
+                }
+             
+                .header-action-right {
+                    float: right;
+                }
+            }
+
+            .form-control {
+                padding-bottom: 20px;
+
+                input:not([type=checkbox])  {
+                    color: $color__text-white;
+                    background-color: white(0.05);
+                    margin-bottom: 20px;
+                    border-radius: 0px;
+                    transition: 0.3s;
+
+                    @media (max-width: 768px) {
+                       &.wpforms-field-name-first,&.wpforms-field-password-primary{
+                           margin-bottom: 20px;
+                       }
+                    }
+        
+                    width: 100%;
+                    border-color: transparent;
+                    &:focus {
+                        color: $color__text-black;
+                        background-color: $color__text-white;
+                    }
+                }
+
+                .wrapper-inline {
+                    display: flex;
+                    width: 100%;
+
+                    .input-left {
+                        width: 50%;
+                        margin-right: 16px;
+                    }
+
+                    .input-right {
+                        width: 50%;
+                        margin-left: 16px;
+                    }
+
+                    @media (max-width: 768px) {
+                        display: block;
+
+                        .input-left {
+                            width: 100%;
+                            margin-right: 0px;
+
+                            .select {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .input-right {
+                            width: 100%;
+                            margin-left: 0px;
+                            
+                            .select {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form-action {
+                input {
+                    background-color: white(0.05);
+                    height: 20px;
+                    min-width: 20px;
+                    padding-right: 13px;
+
+                    &:checked {
+                        background: $color__primary;
+                        &::before {
+                            opacity: 1;
+                        }
+                        ~ label::before {
+                            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                        }
+                    }
+                }
+
+                button {
+                    height: 48px;
+                    width: 100%;
+                }
+
+                .text-privacy {
+                    text-align: center;
+                    color: $color__text-05;
+
+                    a {
+                        cursor: pointer;
+                    }
+                }
+                
+                .check-item {
+                    display: flex;
+                    padding-bottom: 20px;
+
+                    p {
+                        margin: 0px;
+                        color: $color__text-04;
+                    }
+                }
+            }
+        }
+    }
+}
+

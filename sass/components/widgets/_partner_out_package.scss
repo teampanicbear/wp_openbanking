@@ -1,0 +1,196 @@
+.wrapper-out-package{
+    background-color: $color__background-button;
+    margin-top: -204px;
+
+    .wrapper {
+        @media (max-width: 1440px) {
+            padding: 0 18%;
+        }
+
+        @media (max-width: 1024px) {
+            padding: 0 10%;
+        }
+        
+        @media (max-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-top: -139px;
+    }
+
+    .wrapper-content {
+        padding: 110px 0px;
+        display: flex;
+        
+
+        @media (max-width: 768px) {
+            padding: 100px 0px;
+            display: block;
+        }
+
+        .btn-partner {
+            width: 100%;
+            display: none;
+
+            @media (max-width: 768px) {
+                display: flex;    
+            }
+        }
+
+        h1 {
+            padding-bottom: 40px;
+            display: none;
+
+            @media (max-width: 768px) {
+                display: flex;    
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrapper-content-action {
+            width: 268px;
+            height: fit-content;
+            position: sticky;
+            top: 50px;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            .btn-partner-pc {
+                width: 100%;
+                display: flex;
+    
+                @media (max-width: 768px) {
+                    display: none;    
+                }
+            }
+
+            .wrapper-internal {
+                background-color: $color__background-body;
+                margin-bottom: 20px;
+                
+                h6 {
+                    padding-bottom: 13px;
+                    color: $color__text-black;
+                }
+
+                hr {
+                    border: 1px solid $color__text-black-10;
+                    margin-bottom: 14px;
+                }
+                
+                ul {
+                    li {
+                        cursor: pointer;
+                    }
+                }
+
+                .wrapper-center {
+                    padding: 17px 20px;
+
+                    ul {
+                        li {
+                            @include text-16-normal;
+                            color: $color__text-gold;
+                            cursor: pointer;
+                            margin-bottom: 18px;
+                            transition: 0.3s;
+
+                            &:hover {
+                                color: $color__sub;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .wrapper-list {
+            width: 80%;
+            cursor: pointer;
+
+            @media (max-width: 1440px) {
+                width: 77%;
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+
+            li {
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 100px;
+                cursor: auto;
+
+                @media (max-width: 768px) {
+                    padding-bottom: 60px;
+                }
+
+                .list-item {
+                    padding-left: 15%;
+
+                    @media (max-width: 768px) {
+                        padding-left: 0;
+                    }
+
+                    img {
+                        aspect-ratio: 568/221;
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                    @supports not (aspect-ratio: 568/221) {
+                        img::before {
+                            float: left;
+                            padding-top: 100%;
+                            content: "";
+                        }
+                
+                        img::after {
+                            display: block;
+                            content: "";
+                            clear: both;
+                        }
+                    }
+
+                    h4 {
+                        padding: 24px 0 20px 0;
+                        color: $color__text-black;
+
+                        @media (max-width: 768px) {
+                            display: none;
+                        }
+                    }
+
+                    h2 {
+                        padding: 24px 0;
+                        display: none;
+                        color: $color__text-black;
+
+                        @media (max-width: 768px) {
+                            display: block;
+                        }
+                    }
+
+                    P {
+                        margin: 0;
+                        color: $color__sub;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.actived-item-menu {
+        color: $color__secondary !important;
+}

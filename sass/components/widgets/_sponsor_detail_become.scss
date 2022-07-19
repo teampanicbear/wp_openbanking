@@ -1,0 +1,27 @@
+.wrapper-content-detail-become {
+ 
+    @media (max-width: 768px) {
+        padding: 70px 20px 100px 20px !important;
+    }
+  
+    .wrapper-sponsor-detail-become {
+        h6 {
+            display: none;
+            color: $color__text-black-50;
+            padding-bottom: 8px;
+   
+            @media (max-width: 768px) {
+                display: flex;  
+            }
+        }
+   
+        h5 {
+            display: flex;
+   
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+ }
+ 

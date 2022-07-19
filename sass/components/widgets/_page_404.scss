@@ -1,0 +1,62 @@
+.error404 .site-header .content-header {
+    background: #161613;
+}
+.error-404 {
+    .error-404-page-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 173px;
+        padding-bottom: 120px;
+        @media (max-width: 768px) {
+            display: block;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .error-404-img-left {
+        }
+        .error-404-content {
+            text-align: center;
+            .text-404 {
+                font-size: 220px;
+                line-height: 220px;
+                margin: 0;
+                font-family: "Publico Roman";
+                @media (max-width: 1366px) {
+                    font-size: 190px;
+                    line-height: 190px;
+                }
+                @media (max-width: 1024px) {
+                    font-size: 150px;
+                    line-height: 150px;
+                }
+                @media (max-width: 768px) {
+                    font-size: 100px;
+                    line-height: 100px;
+                }
+            }
+            .title-404 {
+                font-size: 36px;
+                line-height: 50px;
+            }
+            .text-16-normal {
+                margin-bottom: 1.5rem;
+            }
+            .btn-primary {
+                display: inline-flex;
+            }
+        }
+        .error-404-img-right {
+        }
+        .icon-ball {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .error-404-img-left {
+                display: none;
+            }
+            .error-404-img-right {
+                display: none;
+            }
+        }
+    }
+}

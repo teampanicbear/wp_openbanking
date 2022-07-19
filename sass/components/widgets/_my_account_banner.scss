@@ -1,0 +1,13 @@
+.wrapper-account-banner {
+    background-color: $color__sub;
+    display: flex;
+
+    .wrapper {
+        margin: auto;
+        padding: 192px 0 0;
+        
+        h1 {
+            color: $color__text-white;
+        }
+    }
+}

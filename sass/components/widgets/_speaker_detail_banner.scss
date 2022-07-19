@@ -1,0 +1,263 @@
+.wrapper-speaker-detail-banner {
+    background-color: $color__sub;
+    width: 100%;
+    margin-bottom: 275px;
+    height: 820px;
+
+    @media (max-width: 1960px) {
+        margin-bottom: 175px;
+    }
+
+    @media (max-width: 1024px) {
+        height: auto;
+        margin-bottom: 70px;
+    }
+
+    .wrapper-content {
+        padding-top: 250px;
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+
+        @media (max-width: 1024px) {
+            padding-top: 110px;
+            flex-direction: column;
+        }
+    }
+
+    .avatar-speaker {
+        width: 50%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 180px;
+        z-index: 1;
+        //to do responsive when more letter
+        img {
+            height: auto;
+            max-width: 100%;
+            border: none;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+        @supports not (aspect-ratio: 1) {
+            img::before {
+                float: left;
+                padding-top: 100%;
+                content: "";
+            }
+    
+            img::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
+        @media (max-width: 1024px) {
+            position: relative;
+            top: 0;
+            width: 100%;
+            aspect-ratio: 336/402;
+            margin-bottom: 24px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @supports not (aspect-ratio: 1) {
+        .avatar-speaker::before {
+            float: left;
+            padding-top: 100%;
+            content: "";
+        }
+
+        .avatar-speaker::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+    @media (max-width: 1024px) {
+        @supports not (aspect-ratio: 336/402) {
+            .avatar-speaker::before {
+                float: left;
+                padding-top: 100%;
+                content: "";
+            }
+    
+            .avatar-speaker::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
+    }
+
+    .avatar-team {
+        width: 50%;
+        aspect-ratio: 134/179;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 180px;
+        z-index: 1;
+        //to do responsive when more letter
+        img {
+            height: auto;
+            max-width: 100%;
+            border: none;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        @media (max-width: 1024px) {
+            position: relative;
+            top: 0;
+            width: 100%;
+            aspect-ratio: 336/402;
+            margin-bottom: 24px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+    @supports not (aspect-ratio: 134/179) {
+        .avatar-team::before {
+            float: left;
+            padding-top: 100%;
+            content: "";
+        }
+
+        .avatar-team::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+    @media (max-width: 1024px) {
+        @supports not (aspect-ratio: 336/402) {
+            .avatar-team::before {
+                float: left;
+                padding-top: 100%;
+                content: "";
+            }
+    
+            .avatar-team::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
+    }
+
+    .info-speaker {
+        padding-left: 100px;
+        width: 50%;
+        padding-bottom: 110px;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            padding-left: 0;
+            padding-bottom: 60px;
+        }
+
+        .breadcumb {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+
+            a {
+                margin: 0;
+                @include text-16-normal;
+                color: $color__text-05;
+
+                &:hover {
+                    color: $color__primary;
+                }
+            }
+
+            .slash {
+                padding: 0px 12px;
+                @include text-14-normal;
+            }
+
+            @media (max-width: 1024px) {
+                margin-bottom: 6px;
+            }
+        }
+
+        .name-speaker {
+            color: $color__primary;
+            padding-bottom: 24px;
+           
+        }
+        .logo{
+            margin-bottom: 10px;
+        }
+
+        .position {
+            padding: 19px 0 17px 0;
+            display: flex;
+            border-bottom: 1px solid $color__border-header;
+            border-top: 1px solid $color__border-header;
+
+            span {
+                @include text-16-normal;
+                color: $color__text-05;
+                padding: 0 70px 0 12px;
+
+                &:last-child {
+                    padding: 0 0 0 12px;
+                }
+            }
+        }
+
+        .description {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            @include text-16-normal;
+            color: $color__text-05;
+            max-height: 213px;
+            overflow-y: scroll;
+            transition: auto 0.3s ease;
+
+            &:hover {
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-color: $color__text-02;
+                }    
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar {
+                width: 3px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: $color__secondary;
+            }
+
+            p {
+                margin: 0;
+                margin-bottom: 8px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

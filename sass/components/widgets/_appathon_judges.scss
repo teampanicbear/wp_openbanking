@@ -1,0 +1,31 @@
+.wrapper-appathon-judges {
+    padding-top: 150px;
+    margin-bottom: 237px;
+
+    .wrapper-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            color: $color__sub;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                font-size: 42px;
+                line-height: 52px;
+            }
+        }
+
+        .sub-title {
+            margin: 17px 0px 80px 0px;
+            color: $color__sub;
+            text-align: center;
+            @include text-16-normal;
+
+            @media (max-width: 768px) {
+                margin: 20px 0px 40px 0px;
+            }
+        }
+    }
+}

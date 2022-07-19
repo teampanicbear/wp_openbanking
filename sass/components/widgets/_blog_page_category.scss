@@ -1,0 +1,30 @@
+.wrapper-page-category-blog {
+    .wrapper-breadcrumb{
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    .wrapper-blog-banner {
+        height: 430px;
+        .star-blog-banner {
+            top: -10px;
+            @media (max-width: 768px){
+                width: 362px;
+            }
+        }
+    }
+    .wrapper-blog-popular{
+        .wrapper-logo {
+            margin-top: -260px;
+        }
+    }
+
+    &.author .wrapper-blog-article {
+        .form-control-inline {
+            @media (max-width: 1024px){
+                width: 100%;
+            }
+        }
+    }
+}

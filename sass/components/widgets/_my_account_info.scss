@@ -1,0 +1,173 @@
+.wrapper-account-info {
+    background-color: $color__background-button;
+
+    .bottom-header {
+        width: 100%;
+        height: 228px;
+        position: absolute;
+        background: black(1);
+
+        @media (max-width: 768px) {
+            height: 349px;
+        }
+    }
+
+    .wrapper-account-content {
+        padding-top: 52px;
+        padding-bottom: 150px;
+
+        @media (max-width: 768px) {
+            padding-top: 40px;
+            padding-bottom: 70px;
+        } 
+    }
+
+    .text-color-disable {
+        color: $color__text-black-30 !important;
+    }
+
+    .wrapper-account {
+        position: relative;
+        // top: -176px;
+        background-color: $color__background-body;
+        margin: 0px 17%;
+
+        @media (max-width: 1439px) {
+            margin: 0px 10%;    
+        }
+
+        @media (max-width: 1024px) {
+            margin: 0px 5%;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin: 0px;
+        }
+
+        hr {
+            border: 1px solid $color__text-black-10;
+            margin-bottom: 32px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 22px;
+            }
+        }
+
+        p {
+            margin: 0;
+            color: $color__secondary;
+
+            @media screen {
+                padding-bottom: 6px;
+            }
+        }
+
+        .wrapper-content {
+            padding: 36px 68px;
+
+            @media (max-width: 768px) {
+                padding: 24px 20px;
+            }
+
+            .content-header {
+                display: flex;
+                position: relative;
+                padding-bottom: $color__icon-black-01;
+                padding-bottom: 27px;
+
+                @media (max-width: 768px) {
+                    padding-bottom: 22px;
+                }
+
+                span {
+                    width: 20%;
+                    position: absolute;
+                    right: 0;
+                    top: 7px; 
+                    cursor: pointer;
+
+                    img {
+                        top: 4px;
+                        right: 33px;
+                        position: absolute;
+                    }
+                    
+                    a {
+                        float: right;
+                        padding-left: 21px;
+                    }
+                }
+                
+                h5 {
+                    width: 80%;
+                    color: $color__secondary;
+
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                h3 {
+                    display: none;
+                    width: 80%;
+                    color: $color__secondary;
+
+                    @media (max-width: 768px) {
+                        display: flex;
+                    }
+                }
+            }
+
+            .content-body {
+                display: block;
+
+                .content-body-item {
+                    width: 100%;
+                    display: flex;
+                    padding-bottom: 24px;
+
+                    @media (max-width: 768px) {
+                        display: block;
+                        padding-bottom: 30px;
+                    }
+                }
+
+                .content-body-field {
+                    width: 100%/4 * 1.5;
+                }
+
+                .content-body-text {
+                    width: 100%/4 * 3;
+
+                    p {
+                        color: $color__secondary;
+                    }
+                }
+            }
+
+            .content-footer {
+                display: flex;
+                position: relative;
+
+                @media (max-width: 768px) {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    .link-change {
+                        position: unset !important;
+                        padding-bottom: 30px;
+                    }
+                }
+
+                .link-change {
+                    color: $color__text-gold;
+                    position: absolute;
+                    right: 0; 
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

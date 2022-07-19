@@ -1,0 +1,55 @@
+.wrapper-partner-banner {
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100% !important;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .wrapper-content {
+        display: block;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .content-text {
+            padding: 200px 0 40px 0;
+            text-align: center;
+
+            h1 {
+                padding-bottom: 20px;
+                color: $color__text-white;
+            }
+            
+            p {
+                display: flex;
+                margin: auto;
+                width: 44%;
+                color: $color__text-09;
+
+                @media (max-width: 1024px) {
+                    width: 67%;    
+                }
+
+                @media (max-width: 768px) {
+                    width: 90%;
+                }
+            }
+        }
+
+        .content-action {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding-bottom: 450px;
+            width: 270px;
+            height: 60px;
+
+            @media (max-width: 768px) {
+                padding-bottom: 400px;
+            }
+        }
+    }
+}

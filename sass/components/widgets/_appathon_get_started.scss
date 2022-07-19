@@ -1,0 +1,96 @@
+.wrapper-appathon-get-started {
+    background-color: $color__sub;
+    padding-top: 104px;
+    padding-bottom: 92px;
+
+    .wrapper {
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+
+    .wrapper-title {
+        width: 40%;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+    }
+
+    .title {
+        color: $color__text-white;
+        margin-bottom: 32px;
+
+        @media (max-width: 1024px) {
+            font-size: 42px;
+            line-height: 52px;
+        }
+    }
+
+    .wrapper-step {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            margin-top: 80px;
+            width: 100%;
+
+            .content-item {
+                margin-left: 25px;
+
+                h3 {
+                    font-size: 42px;
+                    line-height: 52px;
+                }
+            }
+        }
+
+        
+
+        .item-step {
+            margin-left: 16px;
+            max-width: calc(33% - 16px);
+
+            @media (max-width: 1024px) {
+                margin-left: 0;
+                max-width: 100%;
+                display: flex;
+                margin-top: -31px;
+            }
+            
+            .line-mobile {
+                display: none;
+
+                @media (max-width: 1024px) {
+                    display: block;
+                    margin-top: 25px;
+                }
+            }
+
+            .line {
+                width: 80%;
+                margin-left: 13px;
+
+                @media (max-width: 1200px) {
+                    width: 60%;
+                }
+
+                @media (max-width: 1024px) {
+                    display: none;
+                }
+            }
+
+            h3 {
+                display: flex;
+                color: $color__text-02;
+            }
+            
+            p {
+                color: $color__text-white;
+                @include text-16-bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,384 @@
+.partner-card-container {
+	margin-bottom: -247px;
+	@media (max-width: 768px) {
+		padding: 0 !important;
+	}
+}
+
+.widget_our-partners-widget {
+	overflow: hidden;
+}
+.partner-container {
+	.partner-card {
+		width: 604px;
+		background-color: $color__secondary;
+		padding: 76px 102px 84px 144px;
+		margin-left: -144px;
+		color: $color__text-white;
+		font-size: 20px;
+		line-height: 30px;
+
+		.title-mobile {
+			display: none;
+		}
+
+		@media (max-width: 1024px) {
+			width: auto;
+		}
+
+		@media (max-width: 768px) {
+			width: auto;
+			padding: 70px 50px 60px 50px;
+			margin-left: 0;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			p {
+				margin-bottom: 40px;
+			}
+			.partners-btn{
+				display: flex;
+				justify-content: center;
+			}
+			.title-mobile {
+				display: block;
+				
+				h2 {
+					font-size: 42px;
+					line-height: 52px;
+				}
+			}
+
+			.title {
+				display: none;
+			}
+		}
+	}
+	.partner-content {
+	}
+}
+
+.sponsor-container {
+	background-color: $color__text-black-5;
+	padding-top: 4rem;
+	// padding-bottom: 123px;
+	padding-bottom: 35px;
+	@media (max-width: 1024px) {
+		padding-top: 300px;
+	}
+}
+
+.headline-contaner {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+    min-height: calc(200px - 1rem);
+	margin-bottom: 38px;
+
+	@media (max-width: 1024px) {
+		justify-content: center;
+	}
+
+	@media (max-width: 768px) {
+		margin-bottom: 50px;
+		min-height: 0;
+		display: none;
+	}
+
+	.headline-sponsors {
+		width: 50%;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+		
+		.sponsor-content {
+			.sponsor-avatar {
+				@media (max-width: 376px) {
+					min-width: 98px !important;
+				}
+			}
+		}
+	}
+}
+
+.headline-contaner-mobile {
+	display: none;
+	justify-content: flex-end;
+	align-items: flex-end;
+    min-height: calc(200px - 1rem);
+	margin-bottom: 38px;
+
+	@media (max-width: 1024px) {
+		justify-content: center;
+	}
+
+	@media (max-width: 768px) {
+		display: flex;
+		margin-bottom: 50px;
+		min-height: 0;
+	}
+
+	.headline-sponsors {
+		width: 50%;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+		
+		.sponsor-content {
+			.sponsor-avatar {
+				@media (max-width: 376px) {
+					min-width: 98px !important;
+				}
+			}
+		}
+	}
+}
+
+.sponsor-card {
+	.sponsor-title {
+		color: $color__text-black-50;
+		padding: 0 0 28px 0;
+		text-transform: uppercase;
+	}
+	.sponsor-content {
+		display: flex;
+		margin: -16px;
+		flex-wrap: wrap;
+		justify-content: center;
+		.sponsor-avatar {
+			flex: 1;
+			margin: 16px;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			max-width: 27%;
+			// padding: 36px;
+			min-height: 126px;
+			background-color: $color__text-05;
+			border: 1px solid $color__text-white; 
+			box-sizing: border-box;
+			transition: 0.3s;
+			user-select: none;
+
+			&:hover {
+				background-color: $color__background-body;
+			}
+		}
+	}
+	&.community-sponsors {
+		.sponsor-content{
+			justify-content: unset;
+		}
+		.sponsor-avatar {
+			// flex: 1 0 20%;
+			// user-select: none;
+			flex: unset;
+			width: calc(25% - 32px);
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.sponsor-title {
+			text-align: center;
+		}
+	}
+	@media (max-width: 768px) {
+		display: none;
+
+		.sponsor-content {
+			margin: -10px;
+			.sponsor-avatar {
+				margin: 10px;
+				// padding: 16px;
+				// max-width: 40%;
+				min-width: 157px;
+				min-height: 94px;
+			}
+		}
+		&.community-sponsors {
+			.sponsor-avatar {
+				padding: 28px;
+				max-width: 40%;
+				height: 94px;
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		&.headline-sponsors {
+			.sponsor-content {
+				margin: -12px;
+				.sponsor-avatar {
+					min-width: auto;
+					min-height: auto;
+					padding: 10px 22px;
+					height: 70px;
+				}
+			}
+		}
+	}
+	@media (max-width: 376px) {
+		&.headline-sponsors {
+			.sponsor-content {
+				.sponsor-avatar {
+					height: 58px;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sponsor-card-mobile {
+	display: none;
+	.sponsor-title {
+		color: $color__text-black-50;
+		padding: 0 0 28px 0;
+		text-transform: uppercase;
+	}
+	.sponsor-content {
+		display: flex;
+		margin: -16px;
+		flex-wrap: wrap;
+		justify-content: center;
+		.sponsor-avatar {
+			flex: 1;
+			margin: 16px;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			max-width: 27%;
+			// padding: 36px;
+			min-height: 126px;
+			background-color: $color__text-05;
+			border: 1px solid $color__text-white; 
+			box-sizing: border-box;
+			transition: 0.3s;
+			user-select: none;
+
+			&:hover {
+				background-color: $color__background-body;
+			}
+		}
+	}
+	&.community-sponsors-mobile {
+		.sponsor-content{
+			justify-content: unset;
+		}
+		.sponsor-avatar {
+			// flex: 1 0 20%;
+			// user-select: none;
+			flex: unset;
+			width: calc(25% - 32px);
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.sponsor-title {
+			text-align: center;
+		}
+	}
+	@media (max-width: 768px) {
+		display: block;
+		.sponsor-content {
+			margin: -10px;
+			.sponsor-avatar {
+				margin: 10px;
+				// padding: 16px;
+				// max-width: 40%;
+				min-width: 157px;
+				min-height: 94px;
+			}
+		}
+		&.community-sponsors-mobile {
+			.sponsor-content{
+				justify-content: center;
+			}
+			.sponsor-avatar {
+				flex: unset;
+				width: calc(25% - 32px);
+				padding: 28px;
+				max-width: 40%;
+				height: 94px;
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		&.headline-sponsors {
+			.sponsor-content {
+				margin: -12px;
+				.sponsor-avatar {
+					min-width: auto;
+					min-height: auto;
+					padding: 10px 22px;
+					height: 70px;
+				}
+			}
+		}
+	}
+	@media (max-width: 376px) {
+		&.headline-sponsors {
+			.sponsor-content {
+				.sponsor-avatar {
+					height: 58px;
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.wrapper-pop-up {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background-color: $color__background-black-90;
+
+	.my-pop-up {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		width: 80%;
+		height: fit-content;
+		max-height: 80%;
+		background-color: white;
+		overflow: auto;
+		padding: 30px 20px 50px 20px;
+
+		h5 {
+			color: $color__text-black;
+		}
+
+		p {
+			color: $color__text-black-90
+		}
+
+		.close-pop-up {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			cursor: pointer;
+		}
+	}
+
+	@media (max-width: 395px) {
+		.my-pop-up {
+			width: 90%;
+		}
+	}
+}
