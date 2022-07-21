@@ -91,12 +91,12 @@ class Elementor_BrazilCampfire_Widget extends \Elementor\Widget_Base
         $the_query = new WP_Query($args);
         ?>
         <?php if ($the_query->have_posts()) : ?>
-            <?php
-                $first_post = $the_query->posts[0];
-                $unixtimestamp = strtotime($first_post->start_date);
-                $unixtimeend = strtotime($first_post->end_date);
-                $url_image = get_the_post_thumbnail_url($first_post->ID);
-            ?>
+        <?php
+            $first_post = $the_query->posts[0];
+            $unixtimestamp = strtotime($first_post->start_date);
+            $unixtimeend = strtotime($first_post->end_date);
+            $url_image = get_the_post_thumbnail_url($first_post->ID);
+        ?>
         
         <div class="wrapper-campfire schero">
             <div class="banner-campfire jarallax" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('<?= $settings['img-thumbnail']['url'] ?>') ;"></div>

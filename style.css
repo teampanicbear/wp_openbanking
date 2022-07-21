@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!
-Theme Name: OBE
+Theme Name: OBE V2
 Theme URI: http://underscores.me/
 Author: Mission Plus
 Author URI: https://www.openbankingexcellence.org/
 Description: OBE theme
-Version: 1.0.0
+Version: 1.0.1
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -2023,7 +2023,8 @@ textarea {
 	outline: none;
 	border: 0px;
 	background-color: rgba(28, 27, 24, 0.05);
-	margin-right: 10px  !important;
+	margin-right: 10px 
+ !important;
 	padding: 0px !important;
 	cursor: pointer;
 }

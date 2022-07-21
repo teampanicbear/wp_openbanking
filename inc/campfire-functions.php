@@ -325,3 +325,35 @@ add_action('rest_api_init', function () {
         'callback' => 'get_previous_campfires',
     ));
 });// http://example.com/wp-json/theme/v1/get-list-regions
+
+
+// api
+//get-list-cates ==> https://developer.wordpress.org/rest-api/reference/categories/
+// http://example.com/wp-json/wp/v2/categories
+//get-list-regions/{{}}
+function get_list_campfire_regions( $data ) {
+    $field = acf_get_field('region');
+    array_shift($field['choices']);
+    return $field['choices'];// trả theo dang pagination
+}
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'theme/v1', 'get-list-campfire-regions', array(
+        'methods' => 'GET',
+        'callback' => 'get_list_campfire_regions',
+    ));
+} );// http://example.com/wp-json/theme/v1/get-list-regions
+//get-list-essentials/{{}}"wp/v2"
+function get_list_campfire_essentials( $data ) {
+    $field = acf_get_field('essential');
+    array_shift($field['choices']);
+    return $field['choices'];// trả theo dang pagination
+}
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'theme/v1', 'get-list-campfire-essentials', array(
+        'methods' => 'GET',
+        'callback' => 'get_list_campfire_essentials',
+    ));
+} );
+// http://example.com/wp-json/theme/v1/get-list-essentials

@@ -41,7 +41,6 @@
     </div>
     <div class="wrapper-member-detail-team">
         <div class="wrapper">
-            <h2 class="title">There's more where <?= the_title() ?> came from...</h2>
             <div class="card-container minus-m16-lr flex">
                 <?php
                 $args = array(

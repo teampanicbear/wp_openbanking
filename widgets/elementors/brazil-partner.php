@@ -77,9 +77,14 @@ class Elementor_BrazilPartner_Widget extends \Elementor\Widget_Base {
                                     'post_type'         => 'sponsor',
                                     'orderby'           => 'date',
                                     'order'             => 'asc',    
-                                    'posts_per_page'    => -1,     
-                                    'meta_key' => 'advanced_options_sponsor_type-sponsor',
-                                    'meta_value' => 'community-sponsor',             
+                                    'posts_per_page'    => -1,
+                                    'meta_query' => array(
+                                        array(
+                                            'key' => 'advanced_options_sponsor_is_brazil_campfire',
+                                            'value' => 'true',
+                                            'compare' => 'LIKE',
+                                        ),
+                                    ),   
                                 );
                                 $the_query = new WP_Query( $args );
                             ?>
@@ -105,8 +110,13 @@ class Elementor_BrazilPartner_Widget extends \Elementor\Widget_Base {
                                     'orderby'           => 'date',
                                     'order'             => 'asc',    
                                     'posts_per_page'    => -1,     
-                                    'meta_key' => 'advanced_options_sponsor_type-sponsor',
-                                    'meta_value' => 'community-sponsor',             
+                                    'meta_query' => array(
+                                        array(
+                                            'key' => 'advanced_options_sponsor_is_brazil_campfire',
+                                            'value' => 'true',
+                                            'compare' => 'LIKE',
+                                        ),
+                                    ),             
                                 );
                                 $the_query = new WP_Query( $args );
                             ?>

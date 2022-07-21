@@ -105,7 +105,7 @@ $isAttend = in_array($current_user_id, $user_attended);
                             </a>
                             /
                             <a href="<?= site_url('campfires') ?>" class="sign-link">
-                                Campfire
+                                Campfires
                             </a>
                             /
                             <a href="javascript:void(0)" class="sign-link">

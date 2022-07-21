@@ -87,32 +87,36 @@ class Elementor_OurPartner_Widget extends \Elementor\Widget_Base {
                             <div class="sponsor-content">
                                 <!-- loop here -->
                                 <?php 
-                                    $args = array(
+                                    $args_headings = array(
                                         'post_status' => 'publish',
                                         'post_type'         => 'sponsor',
                                         'orderby'           => 'date',
                                         'order'             => 'asc',    
-                                        'posts_per_page'    => 3,      
-                                        'meta_key' => 'advanced_options_sponsor_type-sponsor',
-                                        'meta_value' => 'community-sponsor',     
-                                    );
-
-                                    if($isbrazilcampfire == '1') {
-                                        $args['meta_query'] = array(
-                                            'relation' => 'OR',
+                                        'posts_per_page'    => 3,          
+                                        'meta_query' => array(
+                                            'relation' => 'AND',
                                             array(
                                                 'key' => 'advanced_options_sponsor_type-sponsor',
                                                 'value' => 'headline-sponsor',
                                                 'compare' => '=',
                                             ),
                                             array(
-                                                'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                                'value' => '1',
-                                                'compare' => 'LIKE',
+                                                'relation' => 'OR',
+                                                array(
+                                                    'key' => 'advanced_options_sponsor_is_brazil_campfire',
+                                                    'value' => 'true',
+                                                    'compare' => '!=',
+                                                ),
+                                                array(
+                                                    'key' => 'advanced_options_sponsor_is_brazil_campfire',
+                                                    'compare' => 'NOT EXISTS',
+                                                )
                                             )
-                                        );
-                                    }else{
-                                        $args['meta_query'] = array(
+                                        ),       
+                                    );
+
+                                    if($isbrazilcampfire == '1') {
+                                        $args_headings['meta_query'] = array(
                                             'relation' => 'AND',
                                             array(
                                                 'key' => 'advanced_options_sponsor_type-sponsor',
@@ -121,14 +125,13 @@ class Elementor_OurPartner_Widget extends \Elementor\Widget_Base {
                                             ),
                                             array(
                                                 'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                                'value' => '1',
-                                                'compare' => 'NOT LIKE',
-                                            )
+                                                'value' => 'true',
+                                                'compare' => 'LIKE',
+                                            ),
                                         );
                                     }
                                     
-                                    
-                                    $the_query = new WP_Query( $args );
+                                    $the_query = new WP_Query( $args_headings );
                                 ?>
                                 <?php if( $the_query->have_posts() ): ?>
                                 <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -157,45 +160,51 @@ class Elementor_OurPartner_Widget extends \Elementor\Widget_Base {
                             <!-- loop here -->
                             <?php 
                                 
-                                $args = array(
+                                $args_content = array(
                                     'post_status' => 'publish',
                                     'post_type'         => 'sponsor',
                                     'orderby'           => 'date',
                                     'order'             => 'asc',    
-                                    'posts_per_page'    => -1,    
-                                );
-
-                                if($isbrazilcampfire == '1') {
-                                    $args['meta_query'] = array(
-                                        'relation' => 'OR',
-                                        array(
-                                            'key' => 'advanced_options_sponsor_type-sponsor',
-                                            'value' => 'headline-sponsor',
-                                            'compare' => '=',
-                                        ),
-                                        array(
-                                            'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                            'value' => '1',
-                                            'compare' => 'LIKE',
-                                        )
-                                    );
-                                }else{
-                                    $args['meta_query'] = array(
+                                    'posts_per_page'    => -1,         
+                                    'meta_query' => array(
                                         'relation' => 'AND',
                                         array(
                                             'key' => 'advanced_options_sponsor_type-sponsor',
-                                            'value' => 'headline-sponsor',
+                                            'value' => 'community-sponsor',
+                                            'compare' => '=',
+                                        ),
+                                        array(
+                                            'relation' => 'OR',
+                                            array(
+                                                'key' => 'advanced_options_sponsor_is_brazil_campfire',
+                                                'value' => 'true',
+                                                'compare' => '!=',
+                                            ),
+                                            array(
+                                                'key' => 'advanced_options_sponsor_is_brazil_campfire',
+                                                'compare' => 'NOT EXISTS',
+                                            )
+                                        )
+                                    ),      
+                                );
+
+                                if($isbrazilcampfire == '1') {
+                                    $args_content['meta_query'] = array(
+                                        'relation' => 'AND',
+                                        array(
+                                            'key' => 'advanced_options_sponsor_type-sponsor',
+                                            'value' => 'community-sponsor',
                                             'compare' => '=',
                                         ),
                                         array(
                                             'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                            'value' => '1',
-                                            'compare' => 'NOT LIKE',
-                                        )
+                                            'value' => 'true',
+                                            'compare' => 'LIKE',
+                                        ),
                                     );
                                 }
 
-                                $the_query = new WP_Query( $args );
+                                $the_query = new WP_Query( $args_content );
                             ?>
                             <?php if( $the_query->have_posts() ): ?>
                             <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>        
@@ -223,46 +232,8 @@ class Elementor_OurPartner_Widget extends \Elementor\Widget_Base {
                             <div class="sponsor-content">
                                 <!-- loop here -->
                                 <?php 
-                                
-                                    $args = array(
-                                        'post_status' => 'publish',
-                                        'post_type'         => 'sponsor',
-                                        'orderby'           => 'date',
-                                        'order'             => 'asc',    
-                                        'posts_per_page'    => 3,  
-                                    );
 
-                                    if($isbrazilcampfire == '1') {
-                                        $args['meta_query'] = array(
-                                            'relation' => 'OR',
-                                            array(
-                                                'key' => 'advanced_options_sponsor_type-sponsor',
-                                                'value' => 'headline-sponsor',
-                                                'compare' => '=',
-                                            ),
-                                            array(
-                                                'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                                'value' => '1',
-                                                'compare' => 'LIKE',
-                                            )
-                                        );
-                                    }else{
-                                        $args['meta_query'] = array(
-                                            'relation' => 'AND',
-                                            array(
-                                                'key' => 'advanced_options_sponsor_type-sponsor',
-                                                'value' => 'headline-sponsor',
-                                                'compare' => '=',
-                                            ),
-                                            array(
-                                                'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                                'value' => '1',
-                                                'compare' => 'NOT LIKE',
-                                            )
-                                        );
-                                    }
-
-                                    $the_query = new WP_Query( $args );
+                                    $the_query = new WP_Query( $args_headings );
                                 ?>
                                 <?php if( $the_query->have_posts() ): ?>
                                 <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -281,60 +252,8 @@ class Elementor_OurPartner_Widget extends \Elementor\Widget_Base {
                         <div class="sponsor-content">
                             <!-- loop here -->
                             <?php 
-                                
-                                $args = array(
-                                    'post_status' => 'publish',
-                                    'post_type'         => 'sponsor',
-                                    'orderby'           => 'date',
-                                    'order'             => 'asc',    
-                                    'posts_per_page'    => -1,      
-                                    'meta_query' => array(
-                                        'relation' => 'OR',
-                                        array(
-                                            'key' => 'advanced_options_sponsor_type',
-                                            'value' => 'community-sponsor',
-                                            'compare' => '=',
-                                        ),
-                                        array(
-                                            'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                            'value' => '1',
-                                            'compare' => 'LIKE',
-                                        )
-                                    )          
-                                );
 
-
-                                if($isbrazilcampfire == '1') {
-                                    $args['meta_query'] = array(
-                                        'relation' => 'OR',
-                                        array(
-                                            'key' => 'advanced_options_sponsor_type-sponsor',
-                                            'value' => 'headline-sponsor',
-                                            'compare' => '=',
-                                        ),
-                                        array(
-                                            'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                            'value' => '1',
-                                            'compare' => 'LIKE',
-                                        )
-                                    );
-                                }else{
-                                    $args['meta_query'] = array(
-                                        'relation' => 'AND',
-                                        array(
-                                            'key' => 'advanced_options_sponsor_type-sponsor',
-                                            'value' => 'headline-sponsor',
-                                            'compare' => '=',
-                                        ),
-                                        array(
-                                            'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                            'value' => '1',
-                                            'compare' => 'NOT LIKE',
-                                        )
-                                    );
-                                }
-
-                                $the_query = new WP_Query( $args );
+                                $the_query = new WP_Query( $args_content );
                             ?>
                             <?php if( $the_query->have_posts() ): ?>
                             <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>

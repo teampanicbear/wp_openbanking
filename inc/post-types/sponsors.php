@@ -84,7 +84,7 @@ class advanced_options_sponsor {
 		{"type":"url","label":"Facebook","id":"advanced_options_sponsor_facebook"},
 		{"type":"url","label":"Twitter","id":"advanced_options_sponsor_twitter"},
 		{"type":"url","label":"Instagram","id":"advanced_options_sponsor_instagram"},
-		{"type":"checkbox","label":"Is Brazil Campfire","id":"advanced_options_sponsor_is_brazil_campfire"},
+		{"type":"radio","label":"Brazil Campfire","id":"advanced_options_sponsor_is_brazil_campfire","default":"false","options":"false : Not Brazil Campfire\r\ntrue : Is Brazil Campfire"},
 		{"type":"media","label":"Poster Video","button-text":"Upload","return":"url","modal-title":"Choose a file","modal-button":"Select this file","id":"advanced_options_sponsor_poster-video"},
 		{"type":"media","label":"Video","return":"url","modal-title":"Choose a file","modal-button":"Select this file","id":"advanced_options_sponsor_video"}]}';
 

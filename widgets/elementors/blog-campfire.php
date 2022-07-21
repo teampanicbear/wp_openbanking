@@ -51,12 +51,12 @@ class Elementor_BlogCampfire_Widget extends \Elementor\Widget_Base {
         ?>
         <div class="wrapper-previous wrapper-campfire-preview-article" id="campfire">
             <input type="hidden" id="site_url" value="<?= site_url() ?>"/>
-            <div class="wrapper">
+            <div class="wrapper wrapper-blog-article">
                 <!-- <div class='wrapper-heading-filter'> -->
                     <h2 class="heading-previous">Previous Campfires</h2>
                     <div class="wrapper-filter">
                         <form class="form-control-inline" @submit="search">
-                            <input class="search-input" type="text" name="search" placeholder="Search" v-model="filter.s">
+                            <input class="search-input" type="text" name="search" placeholder="Search" v-model="search">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/search_icon.svg" alt="">
                         </form>
                         <!-- <div class="wrapper-option">
@@ -80,6 +80,32 @@ class Elementor_BlogCampfire_Widget extends \Elementor\Widget_Base {
                             </div>
                             <div class="wrapper-select">
                                 <select-custom v-if="listEssentials.length" :options="listEssentials" class="select" @input="changeEssential" />
+                            </div>
+                        </div>
+                        <div class="wrapper-option-mobile">
+                            <button class="btn filter-mobile">
+                                Filter
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/filter_icon.svg" alt="">
+                            </button>
+                            <div class="list-select">
+                                <div class="wrapper-select">
+                                    <select @change="changeCategory">
+                                        <!-- <option value="">All categories</option> -->
+                                        <option v-for="cate in listCategories" :value="cate.value">{{cate.name}}</option>
+                                    </select>
+                                </div>
+                                <div class="wrapper-select">
+                                    <select @change="changeRegion">
+                                        <!-- <option value="hide">All regions</option> -->
+                                        <option v-for="region in listRegions" :value="region.value">{{region.name}}</option>
+                                    </select>
+                                </div>
+                                <div class="wrapper-select">
+                                    <select @change="changeEssential">
+                                        <!-- <option value="hide">All essentials</option> -->
+                                        <option v-for="essential in listEssentials" :value="essential.value">{{essential.name}}</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -127,7 +153,9 @@ class Elementor_BlogCampfire_Widget extends \Elementor\Widget_Base {
                                 isbrazilcampfire: '<?php echo $isbrazilcampfire == '1' ? $isbrazilcampfire : '0'; ?>',
                             },
                             maxPage: 2,
-                            siteUrl: ''
+                            siteUrl: '',
+                            search: '',
+                            timeOutSearch: null,
                         }
                     },
                     created:  function () {
@@ -135,6 +163,17 @@ class Elementor_BlogCampfire_Widget extends \Elementor\Widget_Base {
                         this.getCampfires(false,false);
                         this.getRegions();
                         this.getEssentials();
+                    },
+                    watch: {
+                        search: function (val, oldVal) {
+                            this.filter.s = val;
+                            this.checkTime = false;
+                            const _this = this;
+                            if(this.timeOutSearch) clearTimeout(this.timeOutSearch);
+                            this.timeOutSearch = setTimeout( function(e) {
+                                _this.getCampfires(true);
+                            },500);
+                        },
                     },
                     methods: {
                         checkLogin: function(e) {
@@ -198,13 +237,10 @@ class Elementor_BlogCampfire_Widget extends \Elementor\Widget_Base {
                         },
                         buildSearchQuery: function () {
                             let query = new URLSearchParams(this.filter).toString(); 
-                            
-                            return this.siteUrl + "?rest_route=/theme/v1/get-previous-campfires&" + query;
-                            // return this.siteUrl + "/wp-json/theme/v1/get-previous-campfires?" + query;
+                            return this.siteUrl + "/wp-json/theme/v1/get-previous-campfires?" + query;
                         },
                         getRegions: async function() {
-                            // const response = await fetch(this.siteUrl + "/wp-json/theme/v1/get-list-regions");
-                            const response = await fetch("https://www.openbankingexcellence.org/wp-json/theme/v1/get-list-regions");
+                            const response = await fetch(this.siteUrl + "/wp-json/theme/v1/get-list-campfire-regions");
                             const data = await response.json();
                             this.listRegions = [{
                                 name: 'All Regions',
@@ -217,8 +253,7 @@ class Elementor_BlogCampfire_Widget extends \Elementor\Widget_Base {
                             })];
                         },
                         getEssentials: async function() {
-                            // const response = await fetch(this.siteUrl + "/wp-json/theme/v1/get-list-essentials");
-                            const response = await fetch("https://www.openbankingexcellence.org/wp-json/theme/v1/get-list-essentials");
+                            const response = await fetch(this.siteUrl + "/wp-json/theme/v1/get-list-campfire-essentials");
                             const data = await response.json();
                             this.listEssentials = [{
                                 name: 'All essentials',
@@ -246,6 +281,10 @@ class Elementor_BlogCampfire_Widget extends \Elementor\Widget_Base {
                             //$('#loader').hide();
                         },
                     },
+                })
+
+                $('.filter-mobile').click(function() {
+                    $('.wrapper-option-mobile .list-select').toggleClass('hide-dropdown-filter');
                 })
             </script>
         <?php
