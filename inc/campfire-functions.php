@@ -170,24 +170,24 @@ function get_previous_campfires($data)
         $args['meta_query'] = array(
             'relation'		=> 'AND',
             array(
-                'key'	 	=> 'essential',
+                'key'	 	=> 'essential_campfire',
                 'value'	  	=> $_GET['essential'],
                 'compare' 	=> '=',
             ),
             array(
-                'key'	  	=> 'region',
+                'key'	  	=> 'region_campfire',
                 'value'	  	=> $_GET['region'],
                 'compare' 	=> '=',
             ),
         );
     } else {
         if (!empty($_GET['region'])) {
-            $args['meta_key'] = 'region';
+            $args['meta_key'] = 'region_campfire';
             $args['meta_value'] = $_GET['region'];
         }
 
         if (!empty($_GET['essential'])) {
-            $args['meta_key'] = 'essential';
+            $args['meta_key'] = 'essential_campfire';
             $args['meta_value'] = $_GET['essential'];
         }
     }
@@ -332,8 +332,8 @@ add_action('rest_api_init', function () {
 // http://example.com/wp-json/wp/v2/categories
 //get-list-regions/{{}}
 function get_list_campfire_regions( $data ) {
-    $field = acf_get_field('region');
-    array_shift($field['choices']);
+	$field = acf_get_field('region_campfire');
+//     array_shift($field['choices']);
     return $field['choices'];// trả theo dang pagination
 }
 
@@ -345,8 +345,8 @@ add_action( 'rest_api_init', function () {
 } );// http://example.com/wp-json/theme/v1/get-list-regions
 //get-list-essentials/{{}}"wp/v2"
 function get_list_campfire_essentials( $data ) {
-    $field = acf_get_field('essential');
-    array_shift($field['choices']);
+    $field = acf_get_field('essential_campfire');
+//     array_shift($field['choices']);
     return $field['choices'];// trả theo dang pagination
 }
 

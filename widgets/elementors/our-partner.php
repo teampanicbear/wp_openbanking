@@ -92,7 +92,7 @@ class Elementor_OurPartner_Widget extends \Elementor\Widget_Base {
                                         'post_type'         => 'sponsor',
                                         'orderby'           => 'date',
                                         'order'             => 'asc',    
-                                        'posts_per_page'    => 3,          
+                                        'posts_per_page'    => 4,          
                                         'meta_query' => array(
                                             'relation' => 'AND',
                                             array(

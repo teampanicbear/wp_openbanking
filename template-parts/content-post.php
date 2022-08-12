@@ -60,7 +60,11 @@ $slugCategory = $categories[0]->slug;
                             </div>
                             <div class="info-right text-16-normal">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog_detail_stopwatch.svg" alt="" />
-                                <?= the_date('H:i d M Y') ?>
+								<?php if(get_field('event_start_date')) : ?>
+								<?= date('H:i d M Y', strtotime(get_field('event_start_date'))); ?>
+								<?php else : ?>
+                                <?= the_date('H:i d M Y') ?>
+								<?php endif; ?>
                             </div>
                         </div>
                         <hr />

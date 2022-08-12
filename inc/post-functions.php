@@ -51,7 +51,7 @@ add_action( 'wp_insert_post', 'new_update_count', 10, 3 );
 //get-list-regions/{{}}
 function get_list_regions( $data ) {
     $field = acf_get_field('region');
-    array_shift($field['choices']);
+//     array_shift($field['choices']);
     return $field['choices'];// trả theo dang pagination
 }
 
@@ -64,7 +64,7 @@ add_action( 'rest_api_init', function () {
 //get-list-essentials/{{}}"wp/v2"
 function get_list_essentials( $data ) {
     $field = acf_get_field('essential');
-    array_shift($field['choices']);
+//     array_shift($field['choices']);
     return $field['choices'];// trả theo dang pagination
 }
 
@@ -87,7 +87,7 @@ function get_recent_posts( $data ) {
         'post_type' => 'post',
         'post_status' => 'publish',
         'posts_per_page' => $per_page,
-        'paged' => $page
+        'paged' => $page,
     );
     if ($_GET['time']) {
         $time = $_GET['time'];
@@ -134,6 +134,21 @@ function get_recent_posts( $data ) {
             $args['meta_value'] = $_GET['essential'];
         }
     }
+	
+    if($_GET['category'] == $id_events_awards) {
+        $args['meta_query'] = array(
+            'relation'		=> 'OR',
+            array(
+                'key'	 	=> 'event_start_date',
+                'compare' 	=> 'NOT EXISTS',
+            ),
+            array(
+                'key'	 	=> 'event_start_date',
+                'compare' 	=> 'EXISTS',
+            ),
+        );
+        $args['orderby'] = array( 'event_start_date' => 'DESC', 'date' => 'DESC' );
+    }
 
     $query = new WP_Query($args);
     $max_num_pages = $query->max_num_pages;
@@ -147,6 +162,15 @@ function get_recent_posts( $data ) {
         $item->the_date = date_i18n("d", $post_date);
         $item->the_time = date_i18n("M", $post_date) . ', ' .  date_i18n("Y", $post_date);
         $categories = get_the_category($item);
+		$id_events_awards = get_category_by_slug("events-and-awards")->term_id;
+        if($_GET['category'] == $id_events_awards) {
+            $event_start_date = get_field('event_start_date',$item->ID);
+            if(isset($event_start_date)) {
+                $event_start_date = strtotime($event_start_date);
+                $item->the_date = date_i18n("d", $event_start_date);
+                $item->the_time = date_i18n("M", $event_start_date) . ', ' .  date_i18n("Y", $event_start_date);
+            }
+        }
         $item->categories = array_map(function ($item) {
             return [
                 'name' => $item->name,

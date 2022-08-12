@@ -95,7 +95,7 @@ class Elementor_Problem_Widget extends \Elementor\Widget_Base {
                                 'post_type'         => 'sponsor',
                                 'orderby'           => 'date',
                                 'order'             => 'asc',    
-                                'posts_per_page'    => 3,     
+                                'posts_per_page'    => 4,     
                                 'meta_key' => 'advanced_options_sponsor_type-sponsor',
                                 'meta_value' => 'headline-sponsor',             
                             );
@@ -103,8 +103,18 @@ class Elementor_Problem_Widget extends \Elementor\Widget_Base {
                             ?>
                             <?php if( $the_query->have_posts() ): ?>
                             <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                                <?php 
+                                    $url = get_the_permalink(); 
+                                    $redirect = get_post_meta(get_the_ID(), 'advanced_options_sponsor_redirect', true);
+                                    $target = false;
+                                    if(!empty($redirect)) {
+                                        $url = $redirect;
+                                        $target = true;
+                                    }
+                                    // var_dump(get_post_meta(get_the_ID(), 'advanced_options_sponsor_is_brazil_campfire', true));
+                                ?>
                             <div class="icon-sponsor">
-                                <a href="<?php the_permalink(); ?>" title='<?php the_title(); ?>'><img alt='<?php the_title(); ?>' src="<?php echo get_post_meta(get_the_ID(), 'advanced_options_sponsor_logo', true)!='' ?  get_post_meta(get_the_ID(), 'advanced_options_sponsor_logo', true) : get_the_post_thumbnail_url() ?>" alt=""></a>
+                                <a href="<?php echo $url; ?>" title='<?php the_title(); ?>' <?php echo $target ? 'target="_blank"' : ''; ?>><img alt='<?php the_title(); ?>' src="<?php echo get_post_meta(get_the_ID(), 'advanced_options_sponsor_logo', true)!='' ?  get_post_meta(get_the_ID(), 'advanced_options_sponsor_logo', true) : get_the_post_thumbnail_url() ?>" alt=""></a>
                             </div>
                             <?php endwhile; ?>
                             <?php endif; ?>

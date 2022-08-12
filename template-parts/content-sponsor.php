@@ -122,7 +122,7 @@
                             $brazilcampfire = get_post_meta(get_the_ID(), 'advanced_options_sponsor_is_brazil_campfire', false);
                             $isBrazilcampfire = false;
                             if(!empty($brazilcampfire) && is_array($brazilcampfire) && count($brazilcampfire) > 0) {
-                                $isBrazilcampfire = true;
+                                $isBrazilcampfire = $brazilcampfire[0];
                             }
                             $args = array(
                                 'post_status' => 'publish',
@@ -152,21 +152,21 @@
                                     )
                                 ),    
                             );
-                            if($isBrazilcampfire == true) {
-                                $args['meta_query'] = array(
-                                    'relation' => 'AND',
-                                    array(
-                                        'key' => 'advanced_options_sponsor_type-sponsor',
-                                        'value' => 'headline-sponsor',
-                                        'compare' => '=',
-                                    ),
-                                    array(
-                                        'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                        'value' => 'true',
-                                        'compare' => 'LIKE',
-                                    ),
-                                );
-                            }
+//                             if($isBrazilcampfire == true) {
+//                                 $args['meta_query'] = array(
+//                                     'relation' => 'AND',
+//                                     array(
+//                                         'key' => 'advanced_options_sponsor_type-sponsor',
+//                                         'value' => 'headline-sponsor',
+//                                         'compare' => '=',
+//                                     ),
+//                                     array(
+//                                         'key' => 'advanced_options_sponsor_is_brazil_campfire',
+//                                         'value' => 'true',
+//                                         'compare' => 'LIKE',
+//                                     ),
+//                                 );
+//                             };
 
                             $the_query = new WP_Query($args);
                             ?>
@@ -224,21 +224,21 @@
                             ),   
                         );
 
-                        if($isBrazilcampfire == true) {
-                            $args['meta_query'] = array(
-                                'relation' => 'AND',
-                                array(
-                                    'key' => 'advanced_options_sponsor_type-sponsor',
-                                    'value' => 'community-sponsor',
-                                    'compare' => '=',
-                                ),
-                                array(
-                                    'key' => 'advanced_options_sponsor_is_brazil_campfire',
-                                    'value' => 'true',
-                                    'compare' => 'LIKE',
-                                ),
-                            );
-                        }
+//                         if($isBrazilcampfire == true) {
+//                             $args['meta_query'] = array(
+//                                 'relation' => 'AND',
+//                                 array(
+//                                     'key' => 'advanced_options_sponsor_type-sponsor',
+//                                     'value' => 'community-sponsor',
+//                                     'compare' => '=',
+//                                 ),
+//                                 array(
+//                                     'key' => 'advanced_options_sponsor_is_brazil_campfire',
+//                                     'value' => 'true',
+//                                     'compare' => 'LIKE',
+//                                 ),
+//                             );
+//                         }
                         $the_query = new WP_Query($args);
                         ?>
                         <?php if ($the_query->have_posts()) : ?>

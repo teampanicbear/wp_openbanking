@@ -80,7 +80,6 @@ add_filter('wpforms_select_field_display', 'wpf_campfire_select', 10, 3);
 //Conutries
 function wpforms_obe_countries()
 {
-
     $args = array(
         'post_status' => 'publish',
         'post_type' => 'country',
@@ -103,8 +102,7 @@ function wpf_obe_country_select($field, $field_atts, $form_data)
                 'value'   => $post->post_title,
             ];
         }
-
-        $field['choices'] = $choices;
+		$field['choices'] = $choices;
     }
 
     return $field;

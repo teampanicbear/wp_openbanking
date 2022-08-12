@@ -71,21 +71,28 @@ class Elementor_Campfire_Widget extends \Elementor\Widget_Base
             'post_status' => 'publish',
             'post_type' => 'campfire',
             'posts_per_page' => 1,
-            'meta_key' => 'end_date',
+            'meta_key' => 'start_date',
             'orderby' => array('meta_value' => 'ASC'),
             'meta_query' => array(
                 'relation' => 'AND',
                 array(
-                    'key'     => 'isbrazilcampfire',
-                    'compare' => 'NOT LIKE',
-                    'value'   => '1',
-                ),
-                array(
-                    'key'     => 'end_date',
+                    'key'     => 'start_date',
                     'type'    => 'DATETIME',
                     'compare' => '>=',
                     'value'   => $today,
                 ),
+				array(
+					'relation' => 'OR',
+					array(
+						'key'     => 'isbrazilcampfire',
+						'compare' => 'NOT LIKE',
+						'value'   => '1',
+					),
+					array(
+						'key'     => 'isbrazilcampfire',
+						'compare' => 'NOT EXISTS',
+					)
+				)
             ),
         );
         $the_query = new WP_Query($args);
