@@ -1,0 +1,470 @@
+$gutter: 30px;
+// # SASS MIXIN
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both; }
+  *zoom: 1;
+}
+
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    @if $prefix == webkit {
+      -webkit-#{$property}: $value;
+    } @else if $prefix == moz {
+      -moz-#{$property}: $value;
+    } @else if $prefix == ms {
+      -ms-#{$property}: $value;
+    } @else if $prefix == o {
+      -o-#{$property}: $value;
+    } @else if $prefix == spec {
+      #{$property}: $value;
+    } @else  {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+
+@mixin transform($transform) {
+  @include prefix(transform, $transform, webkit spec);
+}
+
+@mixin transition($transition) {
+  @include prefix(transition, $transition, webkit spec);
+}
+
+@mixin display-flexbox() {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+@mixin inline-flexbox() {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin flex-wrap($value: nowrap) {
+  @include prefix(flex-wrap, $value, webkit moz spec);
+}
+
+@mixin flex-direction($value) {
+  @include prefix(flex-direction, $value, webkit moz spec);
+}
+
+@mixin align-items($value: stretch) {
+  $alt-value: $value;
+
+  @if $value == 'flex-start' {
+    $alt-value: start;
+  } @else if $value == 'flex-end' {
+    $alt-value: end;
+  }
+
+  // sass-lint:disable no-misspelled-properties
+  -ms-flex-align: $alt-value;
+  @include prefix(align-items, $value, webkit moz spec);
+}
+
+@mixin flex($value) {
+  @include prefix(flex, $value, webkit moz spec);
+}
+
+@mixin flex-basis($width: auto) {
+  // sass-lint:disable no-misspelled-properties
+  -ms-flex-preferred-size: $width;
+  @include prefix(flex-basis, $width, webkit moz spec);
+}
+
+@mixin align-self($align: auto) {
+  // sass-lint:disable no-misspelled-properties
+  -ms-flex-item-align: $align;
+  @include prefix(align-self, $align, webkit spec);
+}
+
+@mixin justify-content($justify: flex-start) {
+  @include prefix(justify-content, $justify, webkit spec);
+}
+
+@mixin order($order) {
+  @include prefix(order, $order, webkit spec);
+}
+
+// Breakpoint and Grid Variables
+$viewportIncrement: 1px;
+
+$mobile: 767px;
+$tablet: 991px;
+$desk: 992px;
+$large: 1200px;
+
+$postmobile: $mobile + $viewportIncrement;
+$pretablet: $tablet - $viewportIncrement;
+$prelarge: $large - $viewportIncrement;
+
+// The following are dependencies of grid
+$breakpoints: (
+        'mobile' '(max-width: #{$mobile})',
+        'tablet' '(min-width: #{$postmobile}) and (max-width: #{$tablet})',
+        'desk' '(min-width: #{$desk}) and (max-width: #{$prelarge})',
+        'large' '(min-width: #{$large})'
+);
+
+$breakpoint-has-widths: ('mobile', 'tablet', 'desk');
+$breakpoint-has-push:  ('tablet', 'tablet-down', 'desk');
+$breakpoint-has-pull:  ('tablet', 'tablet-down', 'desk');
+
+// Grid Setup
+$responsive:         true;
+$mobile-first:       true;
+$use-silent-classes: false;
+$push:               false;
+$pull:               false;
+$clearfix:           false;
+
+
+$class-type: unquote(".");
+$class-prefix: '';
+
+@if $use-silent-classes == true {
+  $class-type: unquote("%");
+}
+
+
+//  Dependency-free breakpoint mixin
+$min: min-width;
+$max: max-width;
+@mixin at-query ($constraint_, $viewport1_, $viewport2_:null) {
+  $constraint: $constraint_; $viewport1: $viewport1_; $viewport2: $viewport2_;
+  @if type-of($constraint_) == number {
+    $viewport1 : $constraint_; $viewport2 : $viewport1_; $constraint : null;
+  }
+  @if $constraint == $min {
+    @media ($min: $viewport1) {
+      @content;
+    }
+  } @else if $constraint == $max {
+    @media ($max: $viewport1) {
+      @content;
+    }
+  } @else {
+    @media ($min: $viewport1) and ($max: $viewport2) {
+      @content;
+    }
+  }
+}
+
+@mixin grid-media-query($media-query) {
+  $breakpoint-found: false;
+
+  @each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+
+    @if $media-query == $name and $declaration {
+      $breakpoint-found: true;
+
+      @media #{$declaration} {
+        @content;
+      }
+    }
+  }
+
+
+  @if $breakpoint-found == false {
+    @warn "Breakpoint '#{$media-query}' does not exist";
+  }
+}
+
+// Drop relative positioning into silent classes which can't take advantage of
+// the `[class*="push--"]` and `[class*="pull--"]` selectors.
+@mixin silent-relative() {
+  @if $use-silent-classes == true {
+    position:relative;
+  }
+}
+
+//  Grid Setup
+#{$class-type}#{$class-prefix}grid {
+  @include display-flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  margin-left: -$gutter/2;
+  margin-right: -$gutter/2;
+  padding: 0;
+  position: relative;
+  float: none;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+#{$class-type}grid__column {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1px;
+  vertical-align: top;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: $gutter / 2;
+  @if $mobile-first == true {
+    width: 100%;
+  }
+
+  @include at-query($max, $mobile) {
+    #{$class-type}#{$class-prefix}grid--stackable > & {
+      width: 100% !important;
+      -webkit-box-flex: 1 !important;
+      -ms-flex: 1 0 auto !important;
+      -webkit-flex: 1 0 auto !important;
+      flex: 1 0 auto !important;
+    }
+  }
+}
+
+// Reversed grids allow you to structure your source in the opposite
+// order to how your rendered layout will appear.
+#{$class-type}#{$class-prefix}grid--rev
+{
+  @include display-flexbox();
+  @include flex-wrap(wrap);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+// Gutterless grids have all the properties of regular grids, minus any spacing.
+#{$class-type}#{$class-prefix}grid--full {
+  margin-left: 0;
+  margin-right: 0;
+
+  > #{$class-type}grid__column {
+    padding: 0 $gutter / 2;
+  }
+}
+
+#{$class-type}#{$class-prefix}grid--nospace {
+  margin: 0;
+  .grid__column {
+    padding: 0;
+  }
+}
+
+#{$class-type}#{$class-prefix}grid--automatic {
+  @include display-flexbox();
+  @include flex-wrap(wrap);
+  > #{$class-type}grid__column {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  > #{$class-type}grid__column[class*="-twelfths"] {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+  > #{$class-type}grid__column:not([class*="-twelfths"]) {
+    //width: auto;
+    flex: 1 1 0%;
+    -webkit-flex: 1 1 0%;
+  }
+}
+
+#{$class-type}#{$class-prefix}grid--equal-height {
+  > .grid__column > div {
+    width: 100%;
+  }
+  > .grid__column  {
+    @include display-flexbox();
+  }
+}
+
+#{$class-type}#{$class-prefix}grid--aligned-topcenter {
+  @include justify-content(center);
+  @include align-items(flex-start);
+}
+#{$class-type}#{$class-prefix}grid--aligned-topright {
+  @include justify-content(flex-end);
+  @include align-items(flex-start);
+}
+#{$class-type}#{$class-prefix}grid--aligned-middleleft {
+  @include justify-content(flex-start);
+  @include align-items(center);
+}
+#{$class-type}#{$class-prefix}grid--aligned-center {
+  @include justify-content(center);
+  @include align-items(center);
+}
+#{$class-type}#{$class-prefix}grid--aligned-middleright {
+  @include justify-content(flex-end);
+  @include align-items(center);
+}
+#{$class-type}#{$class-prefix}grid--aligned-bottomleft {
+  @include justify-content(flex-start);
+  @include align-items(flex-end);
+}
+#{$class-type}#{$class-prefix}grid--aligned-bottomcenter {
+  @include justify-content(center);
+  @include align-items(flex-end);
+}
+#{$class-type}#{$class-prefix}grid--aligned-bottomright {
+  @include justify-content(flex-end);
+  @include align-items(flex-end);
+}
+
+// WIDTHS
+$whole-widths: (
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4,
+        five: 5,
+        six: 6,
+        seven: 7,
+        eight: 8,
+        nine: 9,
+        ten: 10,
+        eleven: 11,
+        twelfth: 12
+);
+$even-widths: (
+        two: 2,
+        three: 4,
+        four: 4,
+        five: 6,
+        six: 6,
+        seven: 6,
+        eight: 8,
+        nine: 10,
+        ten: 10,
+        eleven: 10,
+        twelfth: 12
+);
+
+@mixin column-number($number:"", $widths: $whole-widths, $type: "", $class:"", $prefix: "") {
+
+  $name: 'column';
+  // Column number
+  @each $key, $val in $widths {
+    @if $val > 1 {
+      $name: 'columns';
+    }
+    #{$class-type}#{$class}#{$type}#{$prefix}grid--#{$key}-#{$name} > .grid__column
+    {
+      width: 100% * $number / $val;
+    }
+  }
+}
+
+@include column-number(1, $whole-widths, "", "", $class-prefix);
+
+// Doubling
+@mixin doubling($class: 'grid--doubling') {
+  @media (min-width: $postmobile) and (max-width: $tablet) {
+    @include column-number(2, $even-widths, $class-type, $class-prefix + 'grid--doubling', $class-prefix);
+  }
+  @media (max-width: $mobile) {
+    .grid__column {
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--two-columns > &,
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--three-columns > &,
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--four-columns > &,
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--five-columns > &
+      {
+        width: 100%;
+      }
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--six-columns > &,
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--seven-columns > &,
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--eight-columns > &,
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--nine-columns > &
+      {
+        width: 50%;
+      }
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--ten-columns > &,
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--elevent-columns > &,
+      #{$class-type}#{$class-prefix}#{$class}.#{$class-prefix}grid--twelfth-columns > & {
+        width: 33.3333%;
+      }
+    }
+  }
+}
+
+// Create width classes, prefixed by the specified namespace.
+@mixin device-type($namespace:"") {
+  /** Whole */
+  #{$class-type}#{$namespace}one-whole       { width: 100%; }
+
+  /* Halves */
+  #{$class-type}#{$namespace}one-half        { width: 50%; }
+
+  /* Twelfths */
+  #{$class-type}#{$namespace}one-twelfth     { width: 8.333%; }
+  #{$class-type}#{$namespace}two-twelfths    { width: 16.666%; }
+  #{$class-type}#{$namespace}three-twelfths  { width: 25%; }
+  #{$class-type}#{$namespace}four-twelfths   { width: 33.333%; }
+  #{$class-type}#{$namespace}five-twelfths   { width: 41.666% }
+  #{$class-type}#{$namespace}six-twelfths    { width: 50%; }
+  #{$class-type}#{$namespace}seven-twelfths  { width: 58.333%; }
+  #{$class-type}#{$namespace}eight-twelfths  { width: 66.666%; }
+  #{$class-type}#{$namespace}nine-twelfths   { width: 75%; }
+  #{$class-type}#{$namespace}ten-twelfths    { width: 83.333%; }
+  #{$class-type}#{$namespace}eleven-twelfths { width: 91.666%; }
+}
+// Clearfix helper on uniform grids
+@mixin clearfix-helper($namespace:"") {
+  #{$class-type}#{$class-prefix}grid {
+    #{$class-type}#{$namespace}one-half:nth-child(2n+1),
+    #{$class-type}#{$namespace}one-third:nth-child(3n+1),
+    #{$class-type}#{$namespace}one-quarter:nth-child(4n+1),
+    #{$class-type}#{$namespace}one-fifth:nth-child(5n+1),
+    #{$class-type}#{$namespace}one-sixth:nth-child(6n+1),
+    #{$class-type}#{$namespace}two-sixths:nth-child(3n+1),
+    #{$class-type}#{$namespace}three-sixths:nth-child(2n+1),
+    #{$class-type}#{$namespace}two-eighths:nth-child(4n+1),
+    #{$class-type}#{$namespace}four-eighths:nth-child(2n+1),
+    #{$class-type}#{$namespace}five-tenths:nth-child(2n+1),
+    #{$class-type}#{$namespace}one-twelfth:nth-child(12n+1),
+    #{$class-type}#{$namespace}two-twelfths:nth-child(6n+1),
+    #{$class-type}#{$namespace}three-twelfths:nth-child(4n+1),
+    #{$class-type}#{$namespace}four-twelfths:nth-child(3n+1),
+    #{$class-type}#{$namespace}six-twelfths:nth-child(2n+1) {
+      clear: both;
+    }
+  }
+
+}
+// Helper show/hide classes around our breakpoints
+@mixin device-helper($namespace:"") {
+  #{$class-type}#{$namespace}visible       { display: block!important; }
+  #{$class-type}#{$namespace}hidden        { display: none!important; }
+}
+
+// Our regular, non-responsive width and helper classes
+@include device-type($class-prefix);
+@include device-helper($class-prefix);
+
+// Rendering css widths
+@if $responsive == true {
+  // Our responsive classes, if we have enabled them
+  @each $name in $breakpoint-has-widths {
+    @include grid-media-query($name) {
+      @include device-type('#{$class-prefix}#{$name}--');
+      @include device-helper('#{$class-prefix}#{$name}--');
+
+      @if $clearfix == true {
+        @include clearfix-helper('#{$class-prefix}#{$name}--');
+        @include clearfix-helper('#{$name}--');
+      }
+    }
+  }
+  @include doubling();
+}
+
+// Rendering css device helper for large screen
+@include grid-media-query('large') {
+  @include device-helper('#{$class-prefix}#{large}--');
+}

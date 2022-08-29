@@ -1,0 +1,288 @@
+// Flexbox
+.flex {
+    display: flex;
+
+    &--spacer {
+        flex: 1;
+    }
+
+    &--column {
+        flex-flow: column;
+    }
+    &--row {
+        flex-flow: row;
+    }
+    &--inline {
+        display: inline-flex;
+    }
+}
+
+.justify {
+    &--center {
+        justify-content: center;
+    }
+
+    &--around {
+        justify-content: space-around;
+    }
+
+    &--between {
+        justify-content: space-between;
+    }
+
+    &--start {
+        justify-content: flex-start;
+    }
+
+    &--end {
+        justify-content: flex-end;
+    }
+}
+
+.align {
+    &--center {
+        align-items: center;
+    }
+
+    &--start {
+        align-items: flex-start;
+    }
+
+    &--end {
+        align-items: flex-end;
+    }
+}
+
+// Text styles
+.text {
+    &--black {
+        font-weight: 900;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+
+    &--semi {
+        font-weight: 600;
+    }
+
+    &--medium {
+        font-weight: 500;
+    }
+
+    &--normal {
+        font-weight: 400;
+    }
+
+    &--light {
+        font-weight: 300;
+    }
+
+    &--extra-light {
+        font-weight: 200;
+    }
+
+    &--italic {
+        font-style: italic;
+    }
+
+    &--upper {
+        text-transform: uppercase;
+    }
+
+    &--lower {
+        text-transform: lowercase;
+    }
+
+    &--capitalize {
+        text-transform: capitalize;
+    }
+
+    &--nowrap {
+        white-space: nowrap;
+    }
+
+    &--strikethrough {
+        text-decoration: line-through;
+    }
+
+    &--white {
+        color: #fff;
+    }
+
+    &--dark {
+        color: $color-dark;
+    }
+
+    &--primary {
+        color: $color-primary;
+    }
+
+    &--secondary {
+        color: $color-secondary;
+    }
+
+    &--link {
+        color: $color-primary;
+        &:hover {
+            color: $color-text;
+        }
+    }
+
+    &--right {
+        text-align: right;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--underline {
+        text-decoration: underline;
+    }
+    &--desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    &--brackets {
+        color: $color-primary;
+        &:before {
+            content: '[';
+            margin-right: 5px;
+        }
+        &:after {
+            content: ']';
+            margin-left: 5px;
+        }
+    }
+    &--outline {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: #f83642;
+    }
+}
+
+// List style
+.no-style {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+// Margin top
+@for $i from 1 through 10 {
+    $number: $i * 10;
+    .mgt--#{$number} {
+        margin-top: #{$number}px;
+    }
+}
+
+// Margin bottom
+@for $i from 1 through 10 {
+    $number: $i * 10;
+    .mgb--#{$number} {
+        margin-bottom: #{$number}px;
+    }
+}
+
+// Padding top
+@for $i from 1 through 10 {
+    $number: $i * 10;
+    .pdt--#{$number} {
+        padding-top: #{$number}px;
+    }
+}
+
+// Padding bottom
+@for $i from 1 through 10 {
+    $number: $i * 10;
+    .pdb--#{$number} {
+        padding-bottom: #{$number}px;
+    }
+}
+
+// Padding
+@for $i from 1 through 10 {
+    $number: $i * 10;
+    .pd--#{$number} {
+        padding: #{$number}px;
+    }
+}
+
+.lazyload {
+    &--fade-in {
+        transition: .3s all;
+        opacity: 0;
+        will-change: opacify;
+
+        &.lazyloaded {
+            opacity: 1;
+        }
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-spinner {
+    animation: spin 500ms infinite linear;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+.text--note {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+}
+.text--large {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.scroll-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+    &--dark {
+        &::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+// Typography
+$font-heading: var(--font-heading);
+$font-body: var(--font-body);
+$font-size-base: 16px !default; // Assumes the browser default, typically `16px`
+$h1-font-size: 180px !default;
+$h2-font-size: 52px !default;
+$h3-font-size: 38px !default;
+$h4-font-size: 32px !default;
+$h5-font-size: 20px !default;
+$h6-font-size: 18px !default;
+
+// Colors
+$color-primary: #7525DB;
+$color-text: #fff;
+$color-border: rgba(#fff, .1);
+$color-secondary: #F88900;
+$color-secondary-dark: #F05937;
+$color-heading: #fff;
+$color-bg: rgba(0, 0, 0, 0.95);
+$color-gray: rgba(#fff, .6);
+$color-gray-100: #F7FAFC;
+$color-gray-200: #F2F5F8;
+$color-gray-300: #f2e8f0;
+$color-gray-700: #4A5568;
+$color-gray-600: #7E8CA0;
+$color-gray-800: #2B3545;
+$color-gray-900: #181D25;
+$color-dark: #232323;
+$color-field-bg: #1a1a1a;
+
+// Layout
+$container-width: 1360px;
+$gutter:  30px;
+$border-radius: 10px;
+
+$transition-drawer: all 0.45s cubic-bezier(0.29, 0.63, 0.44, 1);

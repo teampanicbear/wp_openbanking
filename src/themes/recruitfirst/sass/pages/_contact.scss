@@ -1,0 +1,493 @@
+.page-template-contact {
+  .container {
+    max-width: 1360px;
+    padding: 0 15px;
+  }
+}
+
+.contact {
+  &-header {
+    position: relative;
+    background: #6066FB;
+    height: 0;
+    padding-bottom: percentage(600/1440);
+
+    > svg {
+      position: absolute;
+      top: -30px;
+      left: 0;
+      pointer-events: none;
+    }
+
+    &__bg {
+      position: absolute;
+      left: -5%;
+      width: 110%;
+      top: percentage(165/700);
+      pointer-events: none;
+    }
+
+    h1 {
+      padding-top: percentage(350/700);
+    }
+
+    .flex {
+      margin: 0 -22px;
+    }
+  }
+
+  &-wrapper {
+    padding: 190px 0 150px;
+  }
+}
+
+.contact-form {
+  margin: 0 auto;
+  max-width: 430px;
+  color: $color-dark;
+  position: relative;
+
+  &__header {
+    .h3 {
+      color: $color-dark;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .wpforms-container {
+    margin-top: 55px;
+
+    .wpforms-submit-container {
+      text-align: center;
+      float: none !important;
+    }
+  }
+}
+
+.contact-map {
+  &__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+    margin: 0 -12px;
+    flex-flow: wrap;
+
+    a {
+      padding: 5px 12px;
+    }
+  }
+
+  .pin {
+    width: 10px;
+    height: 10px;
+    background: $color-secondary-dark;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $color-secondary-dark;
+      opacity: .1;
+      border-radius: 50%;
+
+    }
+  }
+
+  #singapore {
+    .pin {
+      left: 44.02%;
+      top: 42.91%;
+
+      &:nth-child(2) {
+        left: 57.68%;
+        top: 50.61%;
+      }
+    }
+  }
+
+  #malaysia {
+    .pin {
+      left: 9.54%;
+      top: 58.28%;
+    }
+  }
+
+  #china {
+    .pin {
+      left: 74.54%;
+      top: 69.11%;
+    }
+  }
+
+  #indonesia {
+    .pin {
+      left: 24.28%;
+      top: 69.45%;
+    }
+  }
+
+  #taiwan {
+    .pin {
+      left: 85.21%;
+      top: 30.3%;
+
+    }
+  }
+
+  #hong-kong {
+    .pin {
+      left: 54.28%;
+      top: 68.53%;
+    }
+  }
+}
+
+.country {
+  &.active {
+    .pin:before {
+      animation: beacon 2s infinite;
+    }
+
+    .pin:after {
+      animation: beacon 2s infinite .3s;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row-reverse;
+  }
+
+  &__map {
+    flex: 0 0 auto;
+    width: 315px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    color: $color-gray-800;
+    font-weight: 500;
+    padding-right: 30px;
+
+    h5 {
+      color: #000;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: bold;
+      margin: 0;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      padding: 10px 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        padding: 6px 0;
+
+        svg {
+          margin-right: 10px;
+          margin-top: 5px;
+          flex: 0 0 auto;
+        }
+      }
+
+    }
+
+    &__socials {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+  }
+  &-info {
+    &__contact {
+      a {
+        color: $color-gray-800;
+
+        &:hover {
+          color: $color-secondary-dark;
+        }
+      }
+    }
+    &__socials {
+      display: flex;
+      align-items: center;
+      margin: 0 -4px;
+      a:not(.btn) {
+        display: inline-block;
+        margin: 0 4px;
+        height: 42px;
+        svg {
+          width: 42px;
+          height: 42px;
+          path {
+            transition: .2s all;
+          }
+        }
+        &:hover {
+          path {
+            fill: $color-secondary-dark;
+          }
+        }
+      }
+      .wechat {
+        height: 42px;
+      }
+    }
+  }
+}
+
+.wechat {
+  position: relative;
+  &:hover .wechat-qr {
+    opacity: 1;
+    visibility: visible;
+  }
+  &-qr {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 450px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background: #fff;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s all;
+    color: $color-gray-800;
+    font-weight: 500;
+    text-align: center;
+    &--bordered {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 24px 30px rgba(0, 0, 0, 0.11);
+    }
+    &--small {
+      width: 280px;
+    }
+    h5 {
+      color: $color-gray-800;
+      font-weight: bold;
+    }
+    h5, p {
+      span {
+        color: $color-primary;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    &-qr {
+      width: 300px;
+      &--small {
+        transform: translateX(-50px);
+      }
+      &--top {
+        top: auto;
+        bottom: 100%;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes beacon {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+.page-template-contact .site-footer {
+  background: #29175F;
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  .contact-header {
+    h1 {
+      font-size: 52px;
+      line-height: 62px;
+      margin: 0 50px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact {
+    &-header {
+      padding-bottom: 453px;
+
+      &__bg {
+        top: 248px;
+        left: 0;
+      }
+
+      > svg {
+        display: none;
+      }
+
+      h1 {
+        padding-top: 80px;
+        text-align: center;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &-wrapper {
+      padding: 125px 5px 55px;
+    }
+
+    &-form {
+      max-width: 100%;
+      width: 100%;
+
+      .wpforms-container {
+        margin-top: 32px;
+
+        .field-newsletter {
+          position: relative !important;
+          margin-top: 29px !important;
+        }
+
+        button[type=submit] {
+          width: 100%;
+        }
+      }
+
+      .wpforms-submit-container {
+        padding-top: 28px !important;
+        width: 100% !important;
+      }
+    }
+
+    &-map {
+      padding-top: 40px;
+
+      &__header {
+        margin: 0;
+      }
+    }
+  }
+  .country {
+    &__map {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__inner {
+      flex-flow: column;
+    }
+
+    &__info {
+      padding-right: 0;
+
+      h5 {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      p {
+        margin-bottom: 24px;
+      }
+
+      ul {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    &-info {
+      &__socials {
+        display: flex;
+        margin-top: 34px;
+        margin-left: -4px;
+        margin-right: -4px;
+
+        > a {
+          display: inline-flex;
+          width: 42px;
+          height: 42px;
+          margin: 0 4px;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .contact-wrapper {
+      padding-top: 210px;
+    }
+  }
+  @media (max-width: 768px) and (min-width: 424px) {
+    .contact-wrapper {
+      padding-top: 190px;
+    }
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  .contact-form {
+    max-width: 100%;
+    width: 100%;
+  }
+  .contact-map {
+    &__header {
+      margin: 0;
+    }
+  }
+  .country {
+    &__inner {
+      flex-flow: column;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-map #indonesia .pin {
+    top: 72.45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-map #indonesia .pin {
+    top: 71.45%;
+  }
+}

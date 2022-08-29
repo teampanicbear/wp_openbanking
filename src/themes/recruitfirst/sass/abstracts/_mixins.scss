@@ -1,0 +1,129 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin visually-hidden() {
+	// stylelint-disable-next-line
+	position: absolute !important;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+
+@mixin visually-shown($position: inherit) {
+	// stylelint-disable-next-line
+	position: $position !important;
+	overflow: auto;
+	width: auto;
+	height: auto;
+	margin: 0;
+	clip: auto;
+}
+
+@mixin prefix($property, $value, $prefixes) {
+	@each $prefix in $prefixes {
+		@if $prefix == webkit {
+			-webkit-#{$property}: $value;
+		} @else if $prefix == moz {
+			-moz-#{$property}: $value;
+		} @else if $prefix == ms {
+			-ms-#{$property}: $value;
+		} @else if $prefix == o {
+			-o-#{$property}: $value;
+		} @else if $prefix == spec {
+			#{$property}: $value;
+		} @else  {
+			@warn 'Unrecognized prefix: #{$prefix}';
+		}
+	}
+}
+
+@mixin user-select($value: none) {
+	@include prefix('user-select', #{$value}, moz ms webkit spec);
+}
+@mixin transform($transform) {
+	@include prefix(transform, $transform, ms webkit spec);
+}
+
+@mixin transition($transition) {
+	@include prefix(transition, $transition, ms webkit spec);
+}
+
+@mixin spinner($size: 20px, $color: $heading-color) {
+	content: '';
+	display: block;
+	width: $size;
+	height: $size;
+	position: absolute;
+	margin-left: - $size / 2;
+	margin-top: - $size / 2;
+	border-radius: 50%;
+	border: 3px solid $color;
+	border-top-color: transparent;
+}
+
+@mixin overlay($z-index: null) {
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(#000, .8);
+		@if ($z-index) {
+			z-index: $z-index;
+		}
+	}
+}
+
+@mixin animation($animation) {
+	@include prefix(animation, #{$animation}, moz o webkit spec);
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@include keyframes(spin) {
+	0% {
+		@include transform(rotate(0deg));
+	}
+
+	100% {
+		@include transform(rotate(360deg));
+	}
+}
+
+@include keyframes(placeholder-background-loading) {
+	0% {
+		opacity: 0.02;
+	}
+
+	50% {
+		opacity: 0.05;
+	}
+
+	100% {
+		opacity: 0.02;
+	}
+}

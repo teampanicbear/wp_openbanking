@@ -1,0 +1,1133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: recruitfirst\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-17 02:51+0000\n"
+"PO-Revision-Date: 2021-10-27 18:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: Chinese (China)\n"
+"Language: zh-CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.6.4\n"
+"X-Domain: rf"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:51
+#, php-format
+msgid "%1s new jobs that you may interested in!"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/footer-v2.php:21
+msgid "&copy; RecruitFirst 2021."
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-tags.php:63
+msgid ", "
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/404.php:23 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/footer.php:17
+msgid "2021 &copy; Copyright RecruitFirst Limited."
+msgstr ""
+
+#. Name of the template
+msgid "About"
+msgstr "关于我们"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/widgets.php:6 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/widgets.php:15
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/widgets.php:24
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/widgets.php:33
+msgid "Add widgets here."
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:131 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:111
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:118
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:104
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:112
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:120
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:128
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:348
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:261
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:462
+msgid "All"
+msgstr "全部"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:253
+msgid "All locations"
+msgstr "全部地点"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:24
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:58
+msgid "Apply now"
+msgstr "即刻申请"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:219
+msgid "Apply!"
+msgstr "申请!"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate-jobs-board.php:52
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:110
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:151
+msgid "Area/District"
+msgstr ""
+"\n"
+"District/Area\n"
+"区域"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:124
+msgid "Back"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:52
+msgid "Back to About us"
+msgstr "返回"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-post.php:94
+msgid "Back to Blog"
+msgstr "返回"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:290
+msgid "Back to Candidate"
+msgstr "返回"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/404.php:21
+msgid "Back to Homepage"
+msgstr "返回"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:270
+msgid "Be the first to know when your ideal job is available."
+msgstr "为理想职位设置提醒"
+
+#. Name of the template
+msgid "Candidate"
+msgstr "我要求职"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:47
+msgid "Change your job alert filters"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:333
+msgid "Clear all"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/header.php:60 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/header.php:72
+msgid "Close"
+msgstr "关闭"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/comments.php:68
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#. 1: comment count number, 2: title.
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+
+#. Name of the template
+msgid "Consolidation"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:134
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:187
+msgid "Consultant Contact"
+msgstr "招聘顾问联系方式"
+
+#. Name of the template
+msgid "Contact"
+msgstr "联系方式"
+
+#. %s: Name of current post. Only visible to screen readers
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/content.php:40
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-post.php:209
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:107
+msgid "Copied"
+msgstr "已复制"
+
+#. Name of the template
+msgid "Country"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:99
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:275
+msgid "Currently, no jobs are available in your country!"
+msgstr "该地区目前没有相关职位。"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:11
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-card.php:6
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-table-row.php:6
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-table-card.php:6
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-list-card.php:6
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:36
+msgid "Day"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:95
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:321
+msgid "DD-MM-YYYY to DD-MM-YYYY"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:116
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:346
+msgid "District/Area"
+msgstr "国家/地区"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:225 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:267 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:413
+msgid "Download"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:247
+msgid "Download Ruby Calendars & Wallpapers"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:196
+msgid "Download Ruby Stickers"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:224
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:427
+msgid "Drag & drop your resume/cv here or click here to browse"
+msgstr "点击上传简历"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:94
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:320
+msgid "Duration of notification"
+msgstr "消息频率"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/footer-v2.php:23
+msgid "EA License number"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-tags.php:100
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:151
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:204
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:57
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:196
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:83
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:281
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:450
+msgid "Email"
+msgstr "邮箱"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:406
+msgid "Email address"
+msgstr "邮箱"
+
+#. Name of the template
+msgid "Employer"
+msgstr "我是雇主"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:83
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:307
+msgid "Enter your email"
+msgstr "邮箱"
+
+#. Name of the template
+msgid "Event"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/unsubscribe.php:22
+msgid "Farewell"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:176
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:190
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:395
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:406
+msgid "Follow us"
+msgstr "扫码关注"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:148
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:376
+msgid "Follow us to begin!"
+msgstr "关注我们！"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/functions.php:56
+msgid "Footer"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/widgets.php:13
+msgid "Footer 1"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/widgets.php:22
+msgid "Footer 2"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/widgets.php:31
+msgid "Footer 3"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:191
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:72
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:402
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:446
+msgid "Full name"
+msgstr "姓名"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:175
+msgid "Full-time"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:100
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:326
+msgid "Fulltime/Contract"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:269
+msgid "Get Notified!"
+msgstr "订阅职位提醒"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:306
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:322
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:338
+msgid "Get Started"
+msgstr "查看"
+
+#. Name of the template
+msgid "Homepage"
+msgstr "首页"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:35
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:28
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:57
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/about.php:45
+msgid "Hong Kong"
+msgstr "中国香港"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/footer-v2.php:24
+msgid "Hong Kong: 60351"
+msgstr "香港: 63302"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:12
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-card.php:7
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-table-row.php:7
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-table-card.php:7
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-list-card.php:7
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:37
+msgid "Hour"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://panicbear.studio/"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:226
+msgid ""
+"If you don't see a suitable role yet, don't worry about it. Sign up for a "
+"job alert so that we can notify you when other opportunities pop up."
+msgstr "如果您暂时没有找到合适的职位，别担心。订阅最新职位提醒，第一时间接收职位信息。"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:245
+msgid ""
+"If you've already got your resume in hand, send it across to us. We'll get "
+"in touch with you if your profile matches a role we're looking to fill."
+msgstr "在此上传简历。如果有适合您的职位，我们会第一时间联系您。"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:29
+msgid "Indonesia"
+msgstr "印度尼西亚"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:94
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:147
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:105
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:335
+msgid "Industries"
+msgstr "行业"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate-jobs-board.php:50
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:118
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:149
+msgid "Industry"
+msgstr "行业"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:184
+msgid "Internship"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:39
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:61
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/about.php:49
+msgid "Jakarta"
+msgstr "雅加达"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:219
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:223
+msgid "Job Alert!"
+msgstr "订阅最新职位提醒"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:83
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:136
+msgid "Job Category"
+msgstr "职能"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:287
+msgid "Job Not Found"
+msgstr "未找到该职位"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate-jobs-board.php:49
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:148
+msgid "Job Title"
+msgstr "职位名称"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate-jobs-board.php:53
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:98
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:168
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:152
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:324
+msgid "Job type"
+msgstr "职位性质"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:75
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:128
+msgid "Job-type"
+msgstr "职位性质"
+
+#. Name of the template
+msgid "Join Detail"
+msgstr ""
+
+#. Name of the template
+msgid "Join us"
+msgstr "加入我们"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:168
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:387
+msgid "Join us on Instagram"
+msgstr "关注RecruitFirst社交媒体账号"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:166
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:385
+msgid "Join us on Wechat"
+msgstr "关注RecruitFirst微信公众号"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:36
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:58
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/about.php:46
+msgid "Kuala Lumpur"
+msgstr "吉隆坡"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/header.php:95
+msgid "Lang"
+msgstr "语言"
+
+#. %s: post title
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-tags.php:83
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:422
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:423
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:470
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:471
+msgid "Let us know if you're looking for any specific roles"
+msgstr "如果您有特别关注的职位，请告诉我们"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:109
+#, php-format
+msgid "Let's add %s on WeChat"
+msgstr "在微信上添加%s为好友"
+
+#. used between list items, there is a space after the comma
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate-jobs-board.php:68
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:167
+msgid "Loading"
+msgstr "加载中"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:67
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate-jobs-board.php:51
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:120
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:109
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:207
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:89
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:102
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:150
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:339
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:416
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:460
+msgid "Location"
+msgstr "地点"
+
+#. Description of the theme
+msgid "Made by Panic Bear studio with love!"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:31
+msgid "Mainland China"
+msgstr "中国大陆"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:30
+msgid "Malaysia"
+msgstr "马来西亚"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/header.php:59 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/header.php:71
+msgid "Menu"
+msgstr "菜单"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:79
+msgid "Modify job alert"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:46
+msgid "Modify Notification"
+msgstr ""
+
+#. Name of the template
+msgid "Modify notification"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:77
+msgid "Modify the filters in your job alert to expand your search options!"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:10
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-card.php:5
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-table-row.php:5
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-table-card.php:5
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-list-card.php:5
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:35
+msgid "Month"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:129
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:313
+msgid ""
+"Net Promoter Score - A universal customer experience metric of the "
+"likelihood our clients & candidates will recommend our services to others"
+msgstr "NPS – 是行业通用的客户忠诚度指标，此项指标能反应出客户和候选人是否愿意向他人推荐我们的服务。"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:429
+msgid "New Client Request: Payroll"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:437
+msgid "New Client Request: RPO and BPO"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:421
+msgid "New Client Request: Staffing and Placement"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:113
+msgid "New Enquiry from RecruitFirst.co"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:41
+msgid "New Jobs!"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single.php:24
+msgid "Next:"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:168
+msgid "No found subscription data"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:147
+msgid "No found subscription ID"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/category.php:18 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:164 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/content-none.php:14
+msgid "No Post Found"
+msgstr "抱歉，暂无相关资讯"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:76
+msgid "Nothing suitable?"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:359
+msgid "Notify me"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:50
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:274
+msgid "Notify me by"
+msgstr "通过以下方式通知我"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:122
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:305
+msgid "NPS score"
+msgstr "NPS得分"
+
+#. 1: title.
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:396
+msgid ""
+"Our consultants will get in touch with you if your profile matches a job."
+msgstr "如果您的简历与职位想匹配，我们的招聘顾问会联系您。"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:156
+msgid "Our Leaders"
+msgstr "团队负责人"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:148
+msgid "Our Locations"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:62
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:115
+msgid "Overview"
+msgstr "概览"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:64
+#, php-format
+msgid "Page %1s of %2s"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/404.php:18
+msgid "Page Not Found"
+msgstr "找不到网页"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/content-page.php:19
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/content.php:53
+msgid "Pages:"
+msgstr ""
+
+#. Author of the theme
+msgid "Panicbear Studio"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:432
+msgid "Payroll"
+msgstr "薪酬服务"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:188
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:444
+msgid "Personal Information"
+msgstr "个人信息"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:145
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:198
+msgid "Phone"
+msgstr "手机"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:202
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:77
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:411
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:455
+msgid "Phone number"
+msgstr "手机"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-functions.php:55
+msgid "Please enter a valid email"
+msgstr "请输入有效的邮箱地址"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:197
+msgid ""
+"Please select language and platform of the Ruby stickers that you want to "
+"download."
+msgstr ""
+
+#. %s: post author.
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-tags.php:46
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. %s: post date.
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:139
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:192
+msgid "Posted by"
+msgstr "招聘顾问"
+
+#. 1: list of categories.
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-tags.php:66
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:266
+msgid "Preview full collection"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single.php:23
+msgid "Previous:"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/functions.php:55
+msgid "Primary"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:108
+msgid "Receive Market Intelligence"
+msgstr "订阅市场资讯"
+
+#. Name of the theme
+msgid "recruitfirst"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:157
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:210
+msgid "Reg No"
+msgstr "注册号"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-post.php:224
+msgid "Related Articles"
+msgstr "相关资讯"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:223
+msgid "Remove file"
+msgstr "移除"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:238
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:242
+msgid "Resume Drop"
+msgstr "上传简历"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:440
+msgid "RPO and BPO"
+msgstr "人才招聘外包&业务外包"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:179
+msgid "Ruby Media Library"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:103
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate-jobs-board.php:54
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:156
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:153
+msgid "Salary"
+msgstr "薪资"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:216
+msgid "Say Hello to Our Hiring Manager"
+msgstr "和我们的招聘经理打个招呼吧"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:229
+msgid "Scan QR Code to download Ruby Stickers on your WeChat app."
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:116
+#, fuzzy
+#, php-format
+#| msgid "Scan QR or search for %1s on WeChat to contact %2s"
+msgid "Scan QR or search for %1s on WeChat to contact"
+msgstr "扫描二维码或在微信中搜索%1s，与%2s联系"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:309 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:388 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-post.php:275
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-post.php:343
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:274
+#, php-format
+msgid "Scan QR or search for %1s on WeChat to follow us"
+msgstr "扫描二维码，或在微信中搜索%1s，关注我们"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:149
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:377
+msgid "Scan the QR code or search our ID \"RecruitFirst\"."
+msgstr "扫描二维码或微信搜索“RecruitFirst”。"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:114
+#, fuzzy
+#, php-format
+#| msgid "Screenshot QR code. Scan QR or search for %1s on WeChat to contact %2s"
+msgid "Screenshot QR code. Scan QR or search for %1s on WeChat to contact"
+msgstr "截屏，打开微信扫描二维码或在微信中搜索%1s与%2s联系"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:307 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:386 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-post.php:273
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-post.php:341
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:272
+#, php-format
+msgid "Screenshot QR code. Scan QR or search for %1s on WeChat to follow us"
+msgstr "截屏，打开微信扫描二维码或在微信中搜索%1s关注我们"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:32
+msgid "Scroll down"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:97
+msgid "Search for job title"
+msgstr "职位搜索"
+
+#. %s: search query.
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "搜索结果： %s"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:332
+msgid "Select all"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:201
+msgid "Select Language"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:341
+msgid "Select location"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:217
+msgid "Select Message App"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:209
+msgid "Select Sticker Pack"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:92
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:318
+msgid "Select your preference"
+msgstr "偏好设置"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:121
+msgid "Send message"
+msgstr "提交"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:395
+msgid "Send Us Your Resume!"
+msgstr "投递简历！"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:417
+msgid "Service Packages"
+msgstr "服务内容"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:37
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:59
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/about.php:47
+msgid "Shanghai"
+msgstr "上海"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:30
+msgid "Share"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:219
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:220
+msgid "Share with our hiring manager why do you want to work here"
+msgstr "写下你的申请理由"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:98
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:100
+msgid "Share with us a line or two about your needs"
+msgstr "请简述您的需求"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/widgets.php:4
+msgid "Sidebar"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:229
+msgid "Sign up"
+msgstr "现在订阅"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:34
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:26
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:56
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/about.php:44
+msgid "Singapore"
+msgstr "新加坡"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/footer-v2.php:24
+msgid "Singapore: 13C6342"
+msgstr "新加坡: 13C6342"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/header-v2.php:26 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/header.php:26 
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/header-contact.php:35
+msgid "Skip to content"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:288
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:169
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:148
+msgid "Sorry, but we are not able to find the job you are looking for."
+msgstr "抱歉，没有找到您搜索的职位。"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/404.php:19
+msgid "Sorry, but we are not able to find the page you are looking for."
+msgstr "抱歉，您搜索的网页未找到。"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:217
+msgid "Sound interesting?"
+msgstr "对该职位感兴趣？"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/index.php:180
+msgid ""
+"Spice up the boring group chats and make your conversations cooler by "
+"sending our fun and entertaining Ruby The Recruiter collections."
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:424
+msgid "Staffing and Placement"
+msgstr "灵活用工"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:151
+msgid "Step 1"
+msgstr "步骤一"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:168
+msgid "Step 2"
+msgstr "步骤二"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:185
+msgid "Step 3"
+msgstr "步骤三"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/joinus.php:238
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:248
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:439
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:483
+msgid "Submit"
+msgstr "提交"
+
+#. 1: list of tags.
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-tags.php:73
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/single-member.php:38
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/employer.php:60
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/about.php:48
+msgid "Taipei"
+msgstr "台北"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/contact.php:27
+msgid "Taiwan"
+msgstr "中国台湾"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:101
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:327
+msgid "Temporary/Part-time"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/inc/template-functions.php:56
+msgid "This field is required"
+msgstr "此内容为必填项"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:126
+msgid "Type of contract"
+msgstr "职位性质"
+
+#. Name of the template
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/consolidation.php:84
+msgid "Unsubscribe notification"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/unsubscribe.php:39
+msgid "Unsubscribe successful"
+msgstr ""
+
+#. Name of the template
+msgid "Update subscription"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:234
+msgid "View all jobs"
+msgstr "查看所有职位"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage-mb.php:103
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:279
+msgid "View other jobs"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/unsubscribe.php:23
+msgid ""
+"We hope you've found the job you were looking for. Should you need job "
+"alerts in the future, don't forget to subscribe with us!"
+msgstr ""
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:67
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:291
+msgid "Wechat"
+msgstr "微信"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:123
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:176
+msgid "What requirements you'll need to be eligible"
+msgstr "所需技能"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:129
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:182
+msgid "What you'll be doing on the job"
+msgstr "工作职责"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/modify.php:76
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/candidate.php:300
+msgid "Whatsapp"
+msgstr "WhatsApp"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/template-parts/job-content.php:117
+#:  
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/job-detail.php:170
+msgid "Who you'll be working for"
+msgstr "公司信息"
+
+#: Volumes/DATA/Sources/recruitfirst/src/themes/recruitfirst/templates/homepage.php:190
+msgid "Why RecruitFirst?"
+msgstr ""
